@@ -19,6 +19,7 @@
 		B25255601B2CC02900907977 /* LDSL_T.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B252555D1B2CC02900907977 /* LDSL_T.jpeg */; };
 		B25255611B2CC02900907977 /* SS_B.png in Resources */ = {isa = PBXBuildFile; fileRef = B252555E1B2CC02900907977 /* SS_B.png */; };
 		B25255631B2CDB6400907977 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = B25255621B2CDB6400907977 /* line.png */; };
+		B25255651B2CE0BC00907977 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25255641B2CE0BC00907977 /* ProductList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B252555D1B2CC02900907977 /* LDSL_T.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LDSL_T.jpeg; sourceTree = "<group>"; };
 		B252555E1B2CC02900907977 /* SS_B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS_B.png; sourceTree = "<group>"; };
 		B25255621B2CDB6400907977 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		B25255641B2CE0BC00907977 /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				B252551C1B2C4B1400907977 /* AppDelegate.swift */,
 				B25255231B2C4B1400907977 /* Images.xcassets */,
 				B252551B1B2C4B1400907977 /* Info.plist */,
+				B25255641B2CE0BC00907977 /* ProductList.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25255651B2CE0BC00907977 /* ProductList.swift in Sources */,
 				B252551F1B2C4B1400907977 /* ViewController.swift in Sources */,
 				B252551D1B2C4B1400907977 /* AppDelegate.swift in Sources */,
 				B252555B1B2CBB7500907977 /* CollectionViewCell.swift in Sources */,
@@ -427,6 +431,7 @@
 				B25255381B2C4B1400907977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B25255391B2C4B1400907977 /* Build configuration list for PBXNativeTarget "eCommerceExerciseTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +440,7 @@
 				B252553B1B2C4B1400907977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

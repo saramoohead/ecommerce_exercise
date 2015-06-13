@@ -10,13 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var tableTitle: [String] = ["Almond Toe Court Shoes", "Suede Shoes", "Leather Driver Saddle Loafers"]
-    var tableDescription: [String] = ["Patent Black", "Blue", "Tan"]
-    var tableGender: [String] = ["W", "W", "M"]
-    var tableCategory: [String] = ["Footwear", "Footwear", "Footwear"]
-    var tableImage: [String] = ["ATCS_PB.jpeg", "SS_B.png", "LDSL_T.jpeg"]
-    var tablePrice: [String] = ["99.00", "42.00", "34.00"]
-    var tableStock: [String] = ["5", "4", "12"]
+    var data = ProductList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +18,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tableTitle.count
+        return data.tableTitle.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
-        cell.labelNameCell.text = tableTitle[indexPath.row]
-        cell.labelDescriptionCell.text = tableDescription[indexPath.row]
-        cell.labelGenderCell.text = tableGender[indexPath.row]
-        cell.labelCategoryCell.text = tableCategory[indexPath.row]
-        cell.labelPriceCell.text = "£" + tablePrice[indexPath.row]
-        cell.labelStockCell.text = tableStock[indexPath.row] + " available"
-        cell.imageCell.image = UIImage(named: tableImage[indexPath.row])
+        cell.labelNameCell.text = data.tableTitle[indexPath.row]
+        cell.labelDescriptionCell.text = data.tableDescription[indexPath.row]
+        cell.labelGenderCell.text = data.tableGender[indexPath.row]
+        cell.labelCategoryCell.text = data.tableCategory[indexPath.row]
+        cell.labelPriceCell.text = "£" + data.tablePrice[indexPath.row]
+        cell.labelStockCell.text = data.tableStock[indexPath.row] + " available"
+        cell.imageCell.image = UIImage(named: data.tableImage[indexPath.row])
         cell.imageBorderCell.image = UIImage(named: "line.png")
         return cell
     }
