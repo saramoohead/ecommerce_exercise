@@ -10,8 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var tableData: [String] = ["Almond Toe Court Shoes", "Suede Shoes", "Leather Driver Saddle Loafers"]
-    var tableImages: [String] = ["ATCS_PB.jpeg", "SS_B.png", "LDSL_T.jpeg"]
+    var tableTitle: [String] = ["Almond Toe Court Shoes", "Suede Shoes", "Leather Driver Saddle Loafers"]
+    var tableDescription: [String] = ["Patent Black", "Blue", "Tan"]
+    var tableGender: [String] = ["W", "W", "M"]
+    var tableCategory: [String] = ["Footwear", "Footwear", "Footwear"]
+    var tableImage: [String] = ["ATCS_PB.jpeg", "SS_B.png", "LDSL_T.jpeg"]
+    var tablePrice: [String] = ["99.00", "42.00", "34.00"]
+    var tableStock: [String] = ["5", "4", "12"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +24,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tableData.count
+        return tableTitle.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
-        cell.labelCell.text = tableData[indexPath.row]
-        cell.imageCell.image = UIImage(named: tableImages[indexPath.row])
+        cell.labelNameCell.text = tableTitle[indexPath.row]
+        cell.labelDescriptionCell.text = tableDescription[indexPath.row]
+        cell.labelGenderCell.text = tableGender[indexPath.row]
+        cell.labelCategoryCell.text = tableCategory[indexPath.row]
+        cell.labelPriceCell.text = "£" + tablePrice[indexPath.row]
+        cell.labelStockCell.text = tableStock[indexPath.row] + " available"
+        cell.imageCell.image = UIImage(named: tableImage[indexPath.row])
+        cell.imageBorderCell.image = UIImage(named: "line.png")
         return cell
     }
     

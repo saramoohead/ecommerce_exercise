@@ -10,6 +10,12 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageBorderCell: UIImageView!
     @IBOutlet weak var imageCell: UIImageView!
-    @IBOutlet weak var labelCell: UILabel!
+    @IBOutlet weak var labelNameCell: UILabel!
+    @IBOutlet weak var labelDescriptionCell: UILabel!
+    @IBOutlet weak var labelPriceCell: UILabel!
+    @IBOutlet weak var labelStockCell: UILabel!
+    @IBOutlet weak var labelGenderCell: UILabel!
+    @IBOutlet weak var labelCategoryCell: UILabel!
 }

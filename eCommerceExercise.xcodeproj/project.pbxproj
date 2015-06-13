@@ -18,6 +18,7 @@
 		B252555F1B2CC02900907977 /* ATCS_PB.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B252555C1B2CC02900907977 /* ATCS_PB.jpeg */; };
 		B25255601B2CC02900907977 /* LDSL_T.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B252555D1B2CC02900907977 /* LDSL_T.jpeg */; };
 		B25255611B2CC02900907977 /* SS_B.png in Resources */ = {isa = PBXBuildFile; fileRef = B252555E1B2CC02900907977 /* SS_B.png */; };
+		B25255631B2CDB6400907977 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = B25255621B2CDB6400907977 /* line.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		B252555C1B2CC02900907977 /* ATCS_PB.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ATCS_PB.jpeg; sourceTree = "<group>"; };
 		B252555D1B2CC02900907977 /* LDSL_T.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LDSL_T.jpeg; sourceTree = "<group>"; };
 		B252555E1B2CC02900907977 /* SS_B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS_B.png; sourceTree = "<group>"; };
+		B25255621B2CDB6400907977 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				B252555C1B2CC02900907977 /* ATCS_PB.jpeg */,
 				B252555D1B2CC02900907977 /* LDSL_T.jpeg */,
 				B252555E1B2CC02900907977 /* SS_B.png */,
+				B25255621B2CDB6400907977 /* line.png */,
 				B252551C1B2C4B1400907977 /* AppDelegate.swift */,
 				B25255231B2C4B1400907977 /* Images.xcassets */,
 				B252551B1B2C4B1400907977 /* Info.plist */,
@@ -212,6 +215,7 @@
 				B25255611B2CC02900907977 /* SS_B.png in Resources */,
 				B25255241B2C4B1400907977 /* Images.xcassets in Resources */,
 				B252555F1B2CC02900907977 /* ATCS_PB.jpeg in Resources */,
+				B25255631B2CDB6400907977 /* line.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
