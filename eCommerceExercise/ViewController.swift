@@ -50,7 +50,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func updateCartCount() {
         cartButton.setTitle("\(cart.cartContents.count)", forState: UIControlState.Normal)
-        println(cartButton.currentTitle)
     }
     
 //    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
