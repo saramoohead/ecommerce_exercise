@@ -89,15 +89,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-ls-1lJ">
-                                                    <rect key="frame" x="77" y="271" width="71" height="30"/>
+                                                    <rect key="frame" x="59" y="269" width="107" height="32"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="Add to cart"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="addToCartButton" destination="gaN-ls-1lJ" id="B54-MA-6Dp"/>
                                             <outlet property="imageBorderCell" destination="L10-nk-FWv" id="Ouu-DI-5X2"/>
                                             <outlet property="imageCell" destination="SvE-0m-9eF" id="qJD-1h-gzd"/>
                                             <outlet property="labelCategoryCell" destination="1jD-RX-Ftr" id="XJb-f2-sNi"/>

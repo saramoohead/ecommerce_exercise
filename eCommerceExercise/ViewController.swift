@@ -31,12 +31,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.labelStockCell.text = data.tableStock[indexPath.row] + " available"
         cell.imageCell.image = UIImage(named: data.tableImage[indexPath.row])
         cell.imageBorderCell.image = UIImage(named: "line.png")
+        
+        cell.addToCartButton.tag = indexPath.row
+        cell.addToCartButton.addTarget(self, action: "addToCart:", forControlEvents: .TouchUpInside)
+        
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("Cell \(indexPath.row) selected")
+    @IBAction func addToCart(sender: UIButton) {
+        let selectedProduct = sender.tag
+        println(selectedProduct)
     }
+    
+//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        println("Cell \(indexPath.row) selected")
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

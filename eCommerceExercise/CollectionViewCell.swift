@@ -18,4 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelStockCell: UILabel!
     @IBOutlet weak var labelGenderCell: UILabel!
     @IBOutlet weak var labelCategoryCell: UILabel!
+    
+    @IBOutlet weak var addToCartButton: UIButton!
+
 }
