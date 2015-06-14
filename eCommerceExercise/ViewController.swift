@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var data = ProductList()
+    var cart = CartBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func addToCart(sender: UIButton) {
         let selectedProduct = sender.tag
-        println(selectedProduct)
+        cart.cartContents.append(selectedProduct)
+        println(cart.cartContents)
+        updateCartCount()
+    }
+    
+    @IBOutlet weak var cartButton: UIButton!
+    
+    func updateCartCount() {
+        cartButton.setTitle("\(cart.cartContents.count)", forState: UIControlState.Normal)
+        println(cartButton.currentTitle)
     }
     
 //    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

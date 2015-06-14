@@ -20,6 +20,8 @@
 		B25255611B2CC02900907977 /* SS_B.png in Resources */ = {isa = PBXBuildFile; fileRef = B252555E1B2CC02900907977 /* SS_B.png */; };
 		B25255631B2CDB6400907977 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = B25255621B2CDB6400907977 /* line.png */; };
 		B25255651B2CE0BC00907977 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25255641B2CE0BC00907977 /* ProductList.swift */; };
+		B25255671B2D002800907977 /* CartBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25255661B2D002800907977 /* CartBrain.swift */; };
+		B25255711B2D089400907977 /* shoppingbag.png in Resources */ = {isa = PBXBuildFile; fileRef = B25255701B2D089400907977 /* shoppingbag.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		B252555E1B2CC02900907977 /* SS_B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS_B.png; sourceTree = "<group>"; };
 		B25255621B2CDB6400907977 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		B25255641B2CE0BC00907977 /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		B25255661B2D002800907977 /* CartBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartBrain.swift; sourceTree = "<group>"; };
+		B25255701B2D089400907977 /* shoppingbag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingbag.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				B25255201B2C4B1400907977 /* Main.storyboard */,
 				B252555A1B2CBB7500907977 /* CollectionViewCell.swift */,
 				B252551A1B2C4B1400907977 /* Supporting Files */,
+				B25255661B2D002800907977 /* CartBrain.swift */,
 			);
 			path = eCommerceExercise;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 				B252555C1B2CC02900907977 /* ATCS_PB.jpeg */,
 				B252555D1B2CC02900907977 /* LDSL_T.jpeg */,
 				B252555E1B2CC02900907977 /* SS_B.png */,
+				B25255701B2D089400907977 /* shoppingbag.png */,
 				B25255621B2CDB6400907977 /* line.png */,
 				B252551C1B2C4B1400907977 /* AppDelegate.swift */,
 				B25255231B2C4B1400907977 /* Images.xcassets */,
@@ -217,6 +223,7 @@
 				B25255601B2CC02900907977 /* LDSL_T.jpeg in Resources */,
 				B25255611B2CC02900907977 /* SS_B.png in Resources */,
 				B25255241B2C4B1400907977 /* Images.xcassets in Resources */,
+				B25255711B2D089400907977 /* shoppingbag.png in Resources */,
 				B252555F1B2CC02900907977 /* ATCS_PB.jpeg in Resources */,
 				B25255631B2CDB6400907977 /* line.png in Resources */,
 			);
@@ -241,6 +248,7 @@
 				B25255651B2CE0BC00907977 /* ProductList.swift in Sources */,
 				B252551F1B2C4B1400907977 /* ViewController.swift in Sources */,
 				B252551D1B2C4B1400907977 /* AppDelegate.swift in Sources */,
+				B25255671B2D002800907977 /* CartBrain.swift in Sources */,
 				B252555B1B2CBB7500907977 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
