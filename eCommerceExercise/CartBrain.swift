@@ -18,7 +18,14 @@ class CartBrain {
         var index = find(array, object)
         array.removeAtIndex(index!)
     }
+
+    var total: Float = 0
     
-    
+    func totalCart() {
+        total = 0
+        for item in cartContents {
+            total += (data.productPrice[item] as NSString).floatValue
+        }
+    }
 
 }

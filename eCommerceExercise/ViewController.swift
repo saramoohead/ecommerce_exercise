@@ -58,7 +58,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let selectedProduct = sender.tag
         cart.cartContents.append(selectedProduct)
         println(cart.cartContents)
-        updateCartCount()
+        updateCartDisplay()
         productCell.reloadData()
     }
     
@@ -66,14 +66,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let selectedProduct = sender.tag
         cart.removeObject(selectedProduct, fromArray: &cart.cartContents)
         println(cart.cartContents)
-        updateCartCount()
+        updateCartDisplay()
         productCell.reloadData()
     }
 
     @IBOutlet weak var cartButton: UIButton!
+    @IBOutlet weak var cartTotalDisplay: UILabel!
     
-    func updateCartCount() {
+    func updateCartDisplay() {
         cartButton.setTitle("\(cart.cartContents.count)", forState: UIControlState.Normal)
+        cart.totalCart()
+        cartTotalDisplay.text = "£" + String.localizedStringWithFormat("%.2f", cart.total)
     }
     
     override func didReceiveMemoryWarning() {
