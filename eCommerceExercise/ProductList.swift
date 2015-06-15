@@ -10,12 +10,12 @@ import Foundation
 
 class ProductList {
 
-    var tableTitle: [String] = ["Almond Toe Court Shoes", "Suede Shoes", "Leather Driver Saddle Loafers"]
-    var tableDescription: [String] = ["Patent Black", "Blue", "Tan"]
-    var tableGender: [String] = ["W", "W", "M"]
-    var tableCategory: [String] = ["Footwear", "Footwear", "Footwear"]
-    var tableImage: [String] = ["ATCS_PB.jpeg", "SS_B.png", "LDSL_T.jpeg"]
-    var tablePrice: [String] = ["99.00", "42.00", "34.00"]
-    var tableStock: [String] = ["5", "4", "12"]
+    var productTitle: [String] = ["Almond Toe Court Shoes", "Suede Shoes", "Leather Driver Saddle Loafers"]
+    var productDescription: [String] = ["Patent Black", "Blue", "Tan"]
+    var productGender: [String] = ["W", "W", "M"]
+    var productCategory: [String] = ["Footwear", "Footwear", "Footwear"]
+    var productImage: [String] = ["ATCS_PB.jpeg", "SS_B.png", "LDSL_T.jpeg"]
+    var productPrice: [String] = ["99.00", "42.00", "34.00"]
+    var productStock: [String] = ["5", "4", "12"]
 
 }

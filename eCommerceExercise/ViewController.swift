@@ -21,19 +21,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.tableTitle.count
+        return data.productTitle.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
-        cell.labelNameCell.text = data.tableTitle[indexPath.row]
+        cell.labelNameCell.text = data.productTitle[indexPath.row]
         cell.labelNameCell.adjustsFontSizeToFitWidth = true;
-        cell.labelDescriptionCell.text = data.tableDescription[indexPath.row]
-        cell.labelGenderCell.text = data.tableGender[indexPath.row]
-        cell.labelCategoryCell.text = data.tableCategory[indexPath.row]
-        cell.labelPriceCell.text = "£" + data.tablePrice[indexPath.row]
-        cell.labelStockCell.text = data.tableStock[indexPath.row] + " available"
-        cell.imageCell.image = UIImage(named: data.tableImage[indexPath.row])
+        cell.labelDescriptionCell.text = data.productDescription[indexPath.row]
+        cell.labelGenderCell.text = data.productGender[indexPath.row]
+        cell.labelCategoryCell.text = data.productCategory[indexPath.row]
+        cell.labelPriceCell.text = "£" + data.productPrice[indexPath.row]
+        cell.labelStockCell.text = data.productStock[indexPath.row] + " available"
+        cell.imageCell.image = UIImage(named: data.productImage[indexPath.row])
         cell.imageBorderCell.image = UIImage(named: "line.png")
         
         cell.addToCartButton.tag = indexPath.row
