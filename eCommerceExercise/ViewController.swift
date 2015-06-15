@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    @IBOutlet weak var productCell: UICollectionView!
+    
     var data = ProductList()
     var cart = CartBrain()
     
@@ -25,6 +28,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         cell.labelNameCell.text = data.tableTitle[indexPath.row]
+        cell.labelNameCell.adjustsFontSizeToFitWidth = true;
         cell.labelDescriptionCell.text = data.tableDescription[indexPath.row]
         cell.labelGenderCell.text = data.tableGender[indexPath.row]
         cell.labelCategoryCell.text = data.tableCategory[indexPath.row]
@@ -36,14 +40,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.addToCartButton.tag = indexPath.row
         cell.addToCartButton.addTarget(self, action: "addToCart:", forControlEvents: .TouchUpInside)
         
+        if contains(cart.cartContents, indexPath.row) {
+            cell.addToCartButton.setTitle("Remove from cart", forState: UIControlState.Normal)
+        }
+        
         return cell
     }
     
-    @IBAction func addToCart(sender: UIButton) {
+    func addToCart(sender: UIButton) {
         let selectedProduct = sender.tag
         cart.cartContents.append(selectedProduct)
         println(cart.cartContents)
         updateCartCount()
+        productCell.reloadData()
     }
     
     @IBOutlet weak var cartButton: UIButton!
@@ -51,10 +60,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func updateCartCount() {
         cartButton.setTitle("\(cart.cartContents.count)", forState: UIControlState.Normal)
     }
-    
-//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        println("Cell \(indexPath.row) selected")
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

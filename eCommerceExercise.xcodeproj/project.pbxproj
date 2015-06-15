@@ -98,8 +98,8 @@
 				B252551E1B2C4B1400907977 /* ViewController.swift */,
 				B25255201B2C4B1400907977 /* Main.storyboard */,
 				B252555A1B2CBB7500907977 /* CollectionViewCell.swift */,
-				B252551A1B2C4B1400907977 /* Supporting Files */,
 				B25255661B2D002800907977 /* CartBrain.swift */,
+				B252551A1B2C4B1400907977 /* Supporting Files */,
 			);
 			path = eCommerceExercise;
 			sourceTree = "<group>";

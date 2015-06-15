@@ -30,6 +30,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJZ-FG-WvS">
+                                <rect key="frame" x="502" y="28" width="68" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="0jp-pI-Obd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="0" backgroundImage="shoppingbag.png">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x4H-lz-jh0" userLabel="collectionViewTag">
                                 <rect key="frame" x="0.0" y="104" width="600" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,7 +114,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-ls-1lJ">
-                                                    <rect key="frame" x="59" y="269" width="107" height="32"/>
+                                                    <rect key="frame" x="34" y="269" width="157" height="32"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <state key="normal" title="Add to cart"/>
@@ -114,7 +125,7 @@
                                         <constraints>
                                             <constraint firstItem="L10-nk-FWv" firstAttribute="top" secondItem="2e7-y8-qzg" secondAttribute="top" id="1Qu-Im-GWK"/>
                                             <constraint firstItem="SvE-0m-9eF" firstAttribute="top" secondItem="L10-nk-FWv" secondAttribute="bottom" constant="14" id="2cw-7U-uXa"/>
-                                            <constraint firstItem="gaN-ls-1lJ" firstAttribute="leading" secondItem="2e7-y8-qzg" secondAttribute="leadingMargin" constant="51" id="2ot-0u-8Z9"/>
+                                            <constraint firstItem="gaN-ls-1lJ" firstAttribute="leading" secondItem="2e7-y8-qzg" secondAttribute="leadingMargin" constant="26" id="2ot-0u-8Z9"/>
                                             <constraint firstItem="mvr-7K-5NE" firstAttribute="top" secondItem="SvE-0m-9eF" secondAttribute="bottom" constant="16" id="98J-x2-DCj"/>
                                             <constraint firstItem="SvE-0m-9eF" firstAttribute="leading" secondItem="2e7-y8-qzg" secondAttribute="leadingMargin" id="9wN-yt-6LO"/>
                                             <constraint firstItem="L10-nk-FWv" firstAttribute="leading" secondItem="2e7-y8-qzg" secondAttribute="leading" id="B1U-kF-Zzk"/>
@@ -143,7 +154,7 @@
                                             <constraint firstItem="FqA-rL-Vz0" firstAttribute="leading" secondItem="mvr-7K-5NE" secondAttribute="leading" id="uGi-ZU-9yJ"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="addToCartButton" destination="gaN-ls-1lJ" id="B54-MA-6Dp"/>
+                                            <outlet property="addToCartButton" destination="gaN-ls-1lJ" id="WMQ-xk-Mb9"/>
                                             <outlet property="imageBorderCell" destination="L10-nk-FWv" id="Ouu-DI-5X2"/>
                                             <outlet property="imageCell" destination="SvE-0m-9eF" id="qJD-1h-gzd"/>
                                             <outlet property="labelCategoryCell" destination="1jD-RX-Ftr" id="XJb-f2-sNi"/>
@@ -160,17 +171,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="KcN-7u-p5V"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJZ-FG-WvS">
-                                <rect key="frame" x="502" y="28" width="68" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="0jp-pI-Obd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="0" backgroundImage="shoppingbag.png">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -187,6 +187,7 @@
                     </view>
                     <connections>
                         <outlet property="cartButton" destination="XJZ-FG-WvS" id="rJS-f5-yRI"/>
+                        <outlet property="productCell" destination="x4H-lz-jh0" id="HSC-Ve-tiz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
