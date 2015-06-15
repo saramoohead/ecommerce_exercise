@@ -58,6 +58,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="225" height="309"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-ls-1lJ">
+                                                    <rect key="frame" x="34" y="269" width="157" height="32"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <state key="normal" title="Add to cart"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-mH-K7h">
+                                                    <rect key="frame" x="34" y="269" width="157" height="32"/>
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <state key="normal" title="Remove from cart"/>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXx-ra-KoE">
                                                     <rect key="frame" x="8" y="210" width="209" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -113,12 +125,6 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-ls-1lJ">
-                                                    <rect key="frame" x="34" y="269" width="157" height="32"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <state key="normal" title="Add to cart"/>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -163,6 +169,7 @@
                                             <outlet property="labelNameCell" destination="OXx-ra-KoE" id="0Pc-N3-8v7"/>
                                             <outlet property="labelPriceCell" destination="FqA-rL-Vz0" id="aMK-hd-cGT"/>
                                             <outlet property="labelStockCell" destination="lOa-GU-cHa" id="eYP-xo-Uqw"/>
+                                            <outlet property="removeFromCartButton" destination="tPr-mH-K7h" id="wjD-DI-tx0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

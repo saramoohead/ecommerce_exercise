@@ -20,4 +20,5 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelCategoryCell: UILabel!
 
     @IBOutlet weak var addToCartButton: UIButton!
+    @IBOutlet weak var removeFromCartButton: UIButton!
 }

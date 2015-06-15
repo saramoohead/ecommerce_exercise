@@ -9,8 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    
+
     @IBOutlet weak var productCell: UICollectionView!
     
     var data = ProductList()
@@ -40,8 +39,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.addToCartButton.tag = indexPath.row
         cell.addToCartButton.addTarget(self, action: "addToCart:", forControlEvents: .TouchUpInside)
         
+        cell.removeFromCartButton.hidden = true
+        cell.removeFromCartButton.tag = indexPath.row
+        cell.removeFromCartButton.addTarget(self, action: "removeFromCart:", forControlEvents: .TouchUpInside)
+        
         if contains(cart.cartContents, indexPath.row) {
-            cell.addToCartButton.setTitle("Remove from cart", forState: UIControlState.Normal)
+            cell.removeFromCartButton.hidden = false
+            cell.addToCartButton.hidden = true
+        } else {
+            cell.removeFromCartButton.hidden = true
+            cell.addToCartButton.hidden = false
         }
         
         return cell
@@ -55,6 +62,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         productCell.reloadData()
     }
     
+    func removeFromCart(sender: UIButton) {
+        let selectedProduct = sender.tag
+        cart.removeObject(selectedProduct, fromArray: &cart.cartContents)
+        println(cart.cartContents)
+        updateCartCount()
+        productCell.reloadData()
+    }
+
     @IBOutlet weak var cartButton: UIButton!
     
     func updateCartCount() {
@@ -66,6 +81,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
 
-
 }
+
 

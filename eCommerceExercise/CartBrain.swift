@@ -11,4 +11,11 @@ import Foundation
 class CartBrain {
 
     var cartContents = [Int]()
+    
+    func removeObject<T : Equatable>(object: T, inout fromArray array: [T])
+    {
+        var index = find(array, object)
+        array.removeAtIndex(index!)
+    }
+
 }
