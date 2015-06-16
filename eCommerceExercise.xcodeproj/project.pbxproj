@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B252551D1B2C4B1400907977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252551C1B2C4B1400907977 /* AppDelegate.swift */; };
-		B252551F1B2C4B1400907977 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252551E1B2C4B1400907977 /* ViewController.swift */; };
+		B252551F1B2C4B1400907977 /* ProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252551E1B2C4B1400907977 /* ProductController.swift */; };
 		B25255221B2C4B1400907977 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25255201B2C4B1400907977 /* Main.storyboard */; };
 		B25255241B2C4B1400907977 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25255231B2C4B1400907977 /* Images.xcassets */; };
 		B25255331B2C4B1400907977 /* eCommerceExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25255321B2C4B1400907977 /* eCommerceExerciseTests.swift */; };
@@ -38,7 +38,7 @@
 		B25255171B2C4B1400907977 /* eCommerceExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eCommerceExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B252551B1B2C4B1400907977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B252551C1B2C4B1400907977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B252551E1B2C4B1400907977 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B252551E1B2C4B1400907977 /* ProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductController.swift; sourceTree = "<group>"; };
 		B25255211B2C4B1400907977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B25255231B2C4B1400907977 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B252552C1B2C4B1400907977 /* eCommerceExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eCommerceExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 		B25255191B2C4B1400907977 /* eCommerceExercise */ = {
 			isa = PBXGroup;
 			children = (
-				B252551E1B2C4B1400907977 /* ViewController.swift */,
+				B252551E1B2C4B1400907977 /* ProductController.swift */,
 				B25255201B2C4B1400907977 /* Main.storyboard */,
 				B252555A1B2CBB7500907977 /* CollectionViewCell.swift */,
 				B25255661B2D002800907977 /* CartBrain.swift */,
@@ -246,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25255651B2CE0BC00907977 /* ProductList.swift in Sources */,
-				B252551F1B2C4B1400907977 /* ViewController.swift in Sources */,
+				B252551F1B2C4B1400907977 /* ProductController.swift in Sources */,
 				B252551D1B2C4B1400907977 /* AppDelegate.swift in Sources */,
 				B25255671B2D002800907977 /* CartBrain.swift in Sources */,
 				B252555B1B2CBB7500907977 /* CollectionViewCell.swift in Sources */,
