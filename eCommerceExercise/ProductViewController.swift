@@ -9,16 +9,11 @@
 import UIKit
 
 class ProductViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-
-    @IBOutlet weak var productCell: UICollectionView!
+    
+    // set up collection view
     
     var data = ProductList()
-    var cart = CartBrain()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    @IBOutlet weak var productCell: UICollectionView!
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.productTitle.count
@@ -54,10 +49,13 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         return cell
     }
     
+    // add and remove from cart
+    
+    var cart = CartBrain()
+    
     func addToCart(sender: UIButton) {
         let selectedProduct = sender.tag
         cart.cartContents.append(selectedProduct)
-        println(cart.cartContents)
         updateCartDisplay()
         productCell.reloadData()
     }
@@ -65,10 +63,11 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     func removeFromCart(sender: UIButton) {
         let selectedProduct = sender.tag
         cart.removeObject(selectedProduct, fromArray: &cart.cartContents)
-        println(cart.cartContents)
         updateCartDisplay()
         productCell.reloadData()
     }
+    
+    // shopping bag "cart" display
 
     @IBOutlet weak var cartButton: UIButton!
     @IBOutlet weak var cartTotalDisplay: UILabel!
@@ -79,10 +78,31 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         cartTotalDisplay.text = "£" + String.localizedStringWithFormat("%.2f", cart.total)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // pass cart data between views
+    
+    var passedTotalFromVouchers:String!
+    var passedCartContentsFromVouchers:[Int]!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "segueToVouchers") {
+            var svc = segue.destinationViewController as! VoucherViewController;
+            
+            svc.passedTotal = cartTotalDisplay.text
+            svc.passedCartContents = cart.cartContents
+            
+        }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if passedTotalFromVouchers != nil {
+            cartTotalDisplay.text = passedTotalFromVouchers
+            cartButton.setTitle("\(passedCartContentsFromVouchers.count)", forState: UIControlState.Normal)
+            cart.cartContents = passedCartContentsFromVouchers
+        }
+    }
+
 
 }
 
