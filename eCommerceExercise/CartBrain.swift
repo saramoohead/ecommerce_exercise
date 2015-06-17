@@ -62,5 +62,19 @@ class CartBrain {
 
         return accepted
     }
+    
+    func checkStock(selectedProduct: Int) -> Bool {
+        var accepted: Bool = false
+        
+        var availableStock = (productData.productStock[selectedProduct]).toInt()
+        
+        if availableStock > 0 {
+            accepted = true
+        } else {
+            accepted = false
+        }
+        
+        return accepted
+    }
 
 }

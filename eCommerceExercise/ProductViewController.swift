@@ -53,10 +53,12 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     // add and remove from cart
     
     var cart = CartBrain()
+    @IBOutlet weak var productErrorMessage: UILabel!
     
     func addToCart(sender: UIButton) {
         let selectedProduct = sender.tag
-        cart.cartProducts.append(selectedProduct)
+        productErrorMessage.text = ""
+        self.checkStock(selectedProduct)
         updateCartDisplay()
         productCell.reloadData()
     }
@@ -67,6 +69,14 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         checkVouchersAgain()
         updateCartDisplay()
         productCell.reloadData()
+    }
+    
+    func checkStock(selectedProduct: Int) {
+        if cart.checkStock(selectedProduct) {
+            cart.cartProducts.append(selectedProduct)
+        } else {
+            productErrorMessage.text = "That item is out of stock."
+        }
     }
     
     func checkVouchersAgain() {

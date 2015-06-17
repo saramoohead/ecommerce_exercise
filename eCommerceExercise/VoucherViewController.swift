@@ -52,11 +52,7 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     func addToCart(sender: UIButton) {
         let selectedVoucher = sender.tag
         voucherErrorMessage.text = ""
-        if cart.checkVoucher(selectedVoucher) {
-            cart.cartVouchers.append(selectedVoucher)
-        } else {
-            voucherErrorMessage.text = "Your order doesn't qualify for this voucher."
-        }
+        self.checkVoucher(selectedVoucher)
         updateCartDisplay()
         voucherCollection.reloadData()
     }
@@ -66,6 +62,14 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
         cart.removeObject(selectedVoucher, fromArray: &cart.cartVouchers)
         updateCartDisplay()
         voucherCollection.reloadData()
+    }
+    
+    func checkVoucher(selectedVoucher: Int) {
+        if cart.checkVoucher(selectedVoucher) {
+            cart.cartVouchers.append(selectedVoucher)
+        } else {
+            voucherErrorMessage.text = "Your order doesn't qualify for this voucher."
+        }
     }
     
     // shopping bag "cart" display
