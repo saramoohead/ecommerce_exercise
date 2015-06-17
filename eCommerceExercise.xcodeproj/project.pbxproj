@@ -23,6 +23,8 @@
 		B25255671B2D002800907977 /* CartBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25255661B2D002800907977 /* CartBrain.swift */; };
 		B25255711B2D089400907977 /* shoppingbag.png in Resources */ = {isa = PBXBuildFile; fileRef = B25255701B2D089400907977 /* shoppingbag.png */; };
 		B2B7F97A1B30E19700C3CEBE /* VoucherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F9791B30E19700C3CEBE /* VoucherList.swift */; };
+		B2B7F9801B316E8000C3CEBE /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F97F1B316E8000C3CEBE /* VoucherViewController.swift */; };
+		B2B7F9821B31759E00C3CEBE /* VoucherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		B25255661B2D002800907977 /* CartBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartBrain.swift; sourceTree = "<group>"; };
 		B25255701B2D089400907977 /* shoppingbag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingbag.png; sourceTree = "<group>"; };
 		B2B7F9791B30E19700C3CEBE /* VoucherList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherList.swift; sourceTree = "<group>"; };
+		B2B7F97F1B316E8000C3CEBE /* VoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
+		B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				B252551E1B2C4B1400907977 /* ProductViewController.swift */,
+				B2B7F97F1B316E8000C3CEBE /* VoucherViewController.swift */,
+				B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */,
 				B25255201B2C4B1400907977 /* Main.storyboard */,
 				B252555A1B2CBB7500907977 /* CollectionViewCell.swift */,
 				B25255661B2D002800907977 /* CartBrain.swift */,
@@ -249,9 +255,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25255651B2CE0BC00907977 /* ProductList.swift in Sources */,
+				B2B7F9801B316E8000C3CEBE /* VoucherViewController.swift in Sources */,
 				B252551F1B2C4B1400907977 /* ProductViewController.swift in Sources */,
 				B252551D1B2C4B1400907977 /* AppDelegate.swift in Sources */,
 				B25255671B2D002800907977 /* CartBrain.swift in Sources */,
+				B2B7F9821B31759E00C3CEBE /* VoucherCollectionViewCell.swift in Sources */,
 				B2B7F97A1B30E19700C3CEBE /* VoucherList.swift in Sources */,
 				B252555B1B2CBB7500907977 /* CollectionViewCell.swift in Sources */,
 			);

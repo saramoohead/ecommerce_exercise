@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x4H-lz-jh0" userLabel="collectionViewTag">
-                                <rect key="frame" x="0.0" y="104" width="600" height="496"/>
+                                <rect key="frame" x="16" y="100" width="568" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fvx-w9-Z8I">
                                     <size key="itemSize" width="225" height="309"/>
@@ -198,23 +198,26 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xdu-pU-pUt" kind="show" id="YwN-g5-BKY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="XJZ-FG-WvS" secondAttribute="bottom" constant="12" id="07S-LH-XU0"/>
+                            <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="XJZ-FG-WvS" secondAttribute="bottom" constant="8" id="07S-LH-XU0"/>
                             <constraint firstItem="5yW-rP-cOX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="6hh-22-gCg"/>
                             <constraint firstAttribute="centerX" secondItem="jSo-Sm-1GF" secondAttribute="centerX" constant="-0.5" id="KFx-HZ-3Xa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5yW-rP-cOX" secondAttribute="trailing" constant="14" id="L6E-yC-yKa"/>
-                            <constraint firstItem="x4H-lz-jh0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Mls-m9-2rp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="x4H-lz-jh0" secondAttribute="trailing" constant="-16" id="PcB-2V-ylp"/>
+                            <constraint firstItem="x4H-lz-jh0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mls-m9-2rp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x4H-lz-jh0" secondAttribute="trailing" id="PcB-2V-ylp"/>
                             <constraint firstItem="XJZ-FG-WvS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="UjM-ft-iCe"/>
                             <constraint firstItem="jnb-kV-mWS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="aFZ-vY-Eo3"/>
-                            <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="5yW-rP-cOX" secondAttribute="bottom" constant="8" symbolic="YES" id="b3t-J4-vYV"/>
+                            <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="5yW-rP-cOX" secondAttribute="bottom" constant="4" id="b3t-J4-vYV"/>
                             <constraint firstItem="XJZ-FG-WvS" firstAttribute="trailing" secondItem="5yW-rP-cOX" secondAttribute="trailing" id="fMw-UI-eAG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x4H-lz-jh0" secondAttribute="bottom" id="kgh-xj-iRV"/>
                             <constraint firstItem="XJZ-FG-WvS" firstAttribute="leading" secondItem="5yW-rP-cOX" secondAttribute="leading" id="lbk-te-Ygz"/>
-                            <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="qNG-t1-wcM"/>
+                            <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="qNG-t1-wcM"/>
                             <constraint firstAttribute="centerY" secondItem="jSo-Sm-1GF" secondAttribute="centerY" constant="0.5" id="rOj-rD-yr7"/>
                             <constraint firstItem="jnb-kV-mWS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wii-Hs-D3b"/>
                         </constraints>
@@ -227,6 +230,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Voucher View Controller-->
+        <scene sceneID="Xvy-xq-mYP">
+            <objects>
+                <viewController id="xdu-pU-pUt" userLabel="Voucher View Controller" customClass="VoucherViewController" customModule="eCommerceExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rrJ-pg-H2n"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ulb-xe-hMz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g27-8W-gpW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FPO-If-1ii" userLabel="voucherCollectionViewTag">
+                                <rect key="frame" x="16" y="100" width="568" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MjP-lu-uQE">
+                                    <size key="itemSize" width="225" height="261"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="voucherCell" id="w4P-V1-M1k" customClass="VoucherCollectionViewCell" customModule="eCommerceExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="225" height="261"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uys-F7-ipB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="14"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7Y-u5-KXJ">
+                                                    <rect key="frame" x="8" y="28" width="209" height="187"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voucher Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lj-77-wH6">
+                                                    <rect key="frame" x="8" y="214" width="209" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMK-Na-5wL">
+                                                    <rect key="frame" x="8" y="231" width="209" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7A-er-6Oc">
+                                                    <rect key="frame" x="8" y="8" width="50" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="xdu-pU-pUt" id="dXX-Ei-C2b"/>
+                                    <outlet property="delegate" destination="xdu-pU-pUt" id="fpp-c5-UAg"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FPO-If-1ii" firstAttribute="leading" secondItem="g27-8W-gpW" secondAttribute="leadingMargin" id="QNL-za-Dcg"/>
+                            <constraint firstItem="Ulb-xe-hMz" firstAttribute="top" secondItem="FPO-If-1ii" secondAttribute="bottom" id="TUr-R2-cGj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FPO-If-1ii" secondAttribute="trailing" id="Una-n6-hy1"/>
+                            <constraint firstItem="FPO-If-1ii" firstAttribute="top" secondItem="rrJ-pg-H2n" secondAttribute="bottom" constant="80" id="bu8-ee-hnb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="voucherCollection" destination="FPO-If-1ii" id="4A4-XM-6iU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imE-NE-1l7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166" y="179"/>
         </scene>
     </scenes>
     <resources>
