@@ -82,5 +82,11 @@ class CartBrain {
 
         return result
     }
+    
+    func returnStock(selectedProduct: Int) -> [String] {
+        var availableStock = (productData.productStock[selectedProduct]).toInt()!
+        productData.productStock[selectedProduct] = "\(availableStock + 1)"
+        return productData.productStock
+    }
 
 }

@@ -67,6 +67,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         let selectedProduct = sender.tag
         cart.removeObject(selectedProduct, fromArray: &cart.cartProducts)
         checkVouchersAgain()
+        returnStock(selectedProduct)
         updateCartDisplay()
         productCell.reloadData()
     }
@@ -78,8 +79,13 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
             cart.cartProducts.append(selectedProduct)
             data.productStock = resultOfStockCheck.newStockList
         } else {
-            productErrorMessage.text = "That item is out of stock."
+            productErrorMessage.text = "This item is out of stock."
         }
+    }
+    
+    func returnStock(selectedProduct: Int) {
+        var resultOfReturnStock = cart.returnStock(selectedProduct)
+        data.productStock = resultOfReturnStock
     }
     
     func checkVouchersAgain() {
