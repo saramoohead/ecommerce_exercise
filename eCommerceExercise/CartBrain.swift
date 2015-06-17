@@ -25,6 +25,14 @@ class CartBrain {
     var productTotal: Float = 0
     var voucherTotal: Float = 0
     
+    func checkVoucher(selectedVoucher: Int) -> Bool {
+        var accepted: Bool = false
+        if Int(total) > voucherData.voucherMinimum[selectedVoucher] {
+            accepted = true
+        }
+        return accepted
+    }
+    
     func totalCart() {
         productTotal = 0
         voucherTotal = 0

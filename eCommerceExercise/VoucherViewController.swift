@@ -23,7 +23,7 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let voucherCell = collectionView.dequeueReusableCellWithReuseIdentifier("voucherCell", forIndexPath: indexPath) as! VoucherCollectionViewCell
         voucherCell.voucherCategory.text = data.voucherCategory[indexPath.row]
-        voucherCell.voucherConditions.text = data.voucherConditional[indexPath.row]
+        voucherCell.voucherConditions.text = data.voucherConditionDescription[indexPath.row]
         voucherCell.voucherImage.image = UIImage(named: data.voucherImage[indexPath.row])
         
         voucherCell.addToCartButton.tag = indexPath.row
@@ -50,7 +50,9 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func addToCart(sender: UIButton) {
         let selectedVoucher = sender.tag
-        cart.cartVouchers.append(selectedVoucher)
+        if cart.checkVoucher(selectedVoucher) {
+            cart.cartVouchers.append(selectedVoucher)
+        } else {}
         updateCartDisplay()
         voucherCollection.reloadData()
     }
