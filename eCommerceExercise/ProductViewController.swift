@@ -10,7 +10,7 @@ import UIKit
 
 class ProductViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    // set up collection view
+    // product collection view set up
     
     var data = ProductList()
     
@@ -39,7 +39,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.removeFromCartButton.tag = indexPath.row
         cell.removeFromCartButton.addTarget(self, action: "removeFromCart:", forControlEvents: .TouchUpInside)
         
-        if contains(cart.cartContents, indexPath.row) {
+        if contains(cart.cartProducts, indexPath.row) {
             cell.removeFromCartButton.hidden = false
             cell.addToCartButton.hidden = true
         } else {
@@ -56,14 +56,14 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func addToCart(sender: UIButton) {
         let selectedProduct = sender.tag
-        cart.cartContents.append(selectedProduct)
+        cart.cartProducts.append(selectedProduct)
         updateCartDisplay()
         productCell.reloadData()
     }
     
     func removeFromCart(sender: UIButton) {
         let selectedProduct = sender.tag
-        cart.removeObject(selectedProduct, fromArray: &cart.cartContents)
+        cart.removeObject(selectedProduct, fromArray: &cart.cartProducts)
         updateCartDisplay()
         productCell.reloadData()
     }
@@ -74,7 +74,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var cartTotalDisplay: UILabel!
     
     func updateCartDisplay() {
-        cartButton.setTitle("\(cart.cartContents.count)", forState: UIControlState.Normal)
+        cartButton.setTitle("\(cart.cartProducts.count)", forState: UIControlState.Normal)
         cart.totalCart()
         cartTotalDisplay.text = "£" + String.localizedStringWithFormat("%.2f", cart.total)
     }
@@ -86,7 +86,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
             var svc = segue.destinationViewController as! VoucherViewController;
             
             svc.passedTotal = cartTotalDisplay.text
-            svc.passedCartContents = cart.cartContents
+            svc.passedCartContents = cart.cartProducts
             
         }
     }
@@ -100,7 +100,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         if passedTotalFromVouchers != nil {
             cartTotalDisplay.text = passedTotalFromVouchers
             cartButton.setTitle("\(passedCartContentsFromVouchers.count)", forState: UIControlState.Normal)
-            cart.cartContents = passedCartContentsFromVouchers
+            cart.cartProducts = passedCartContentsFromVouchers
         }
     }
 

@@ -25,6 +25,9 @@
 		B2B7F97A1B30E19700C3CEBE /* VoucherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F9791B30E19700C3CEBE /* VoucherList.swift */; };
 		B2B7F9801B316E8000C3CEBE /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F97F1B316E8000C3CEBE /* VoucherViewController.swift */; };
 		B2B7F9821B31759E00C3CEBE /* VoucherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */; };
+		B2B7F98C1B319E7D00C3CEBE /* 5poundsoff.png in Resources */ = {isa = PBXBuildFile; fileRef = B2B7F9891B319E7D00C3CEBE /* 5poundsoff.png */; };
+		B2B7F98D1B319E7D00C3CEBE /* 10poundsoff.png in Resources */ = {isa = PBXBuildFile; fileRef = B2B7F98A1B319E7D00C3CEBE /* 10poundsoff.png */; };
+		B2B7F98E1B319E7D00C3CEBE /* 15poundsoff.png in Resources */ = {isa = PBXBuildFile; fileRef = B2B7F98B1B319E7D00C3CEBE /* 15poundsoff.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		B2B7F9791B30E19700C3CEBE /* VoucherList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherList.swift; sourceTree = "<group>"; };
 		B2B7F97F1B316E8000C3CEBE /* VoucherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
 		B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2B7F9891B319E7D00C3CEBE /* 5poundsoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5poundsoff.png; sourceTree = "<group>"; };
+		B2B7F98A1B319E7D00C3CEBE /* 10poundsoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10poundsoff.png; sourceTree = "<group>"; };
+		B2B7F98B1B319E7D00C3CEBE /* 15poundsoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15poundsoff.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,8 @@
 			children = (
 				B252551E1B2C4B1400907977 /* ProductViewController.swift */,
 				B2B7F97F1B316E8000C3CEBE /* VoucherViewController.swift */,
-				B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */,
 				B25255201B2C4B1400907977 /* Main.storyboard */,
+				B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */,
 				B252555A1B2CBB7500907977 /* CollectionViewCell.swift */,
 				B25255661B2D002800907977 /* CartBrain.swift */,
 				B252551A1B2C4B1400907977 /* Supporting Files */,
@@ -119,6 +125,9 @@
 				B2B7F9791B30E19700C3CEBE /* VoucherList.swift */,
 				B252555C1B2CC02900907977 /* ATCS_PB.jpeg */,
 				B252555D1B2CC02900907977 /* LDSL_T.jpeg */,
+				B2B7F9891B319E7D00C3CEBE /* 5poundsoff.png */,
+				B2B7F98A1B319E7D00C3CEBE /* 10poundsoff.png */,
+				B2B7F98B1B319E7D00C3CEBE /* 15poundsoff.png */,
 				B252555E1B2CC02900907977 /* SS_B.png */,
 				B25255701B2D089400907977 /* shoppingbag.png */,
 				B25255621B2CDB6400907977 /* line.png */,
@@ -229,11 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25255221B2C4B1400907977 /* Main.storyboard in Resources */,
+				B2B7F98D1B319E7D00C3CEBE /* 10poundsoff.png in Resources */,
 				B25255601B2CC02900907977 /* LDSL_T.jpeg in Resources */,
+				B2B7F98C1B319E7D00C3CEBE /* 5poundsoff.png in Resources */,
 				B25255611B2CC02900907977 /* SS_B.png in Resources */,
 				B25255241B2C4B1400907977 /* Images.xcassets in Resources */,
 				B25255711B2D089400907977 /* shoppingbag.png in Resources */,
 				B252555F1B2CC02900907977 /* ATCS_PB.jpeg in Resources */,
+				B2B7F98E1B319E7D00C3CEBE /* 15poundsoff.png in Resources */,
 				B25255631B2CDB6400907977 /* line.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

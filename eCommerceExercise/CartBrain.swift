@@ -10,8 +10,10 @@ import Foundation
 
 class CartBrain {
 
-    var cartContents = [Int]()
-    var data = ProductList()
+    var cartProducts = [Int]()
+    var cartVouchers = [Int]()
+    var productData = ProductList()
+    var voucherData = VoucherList()
     
     func removeObject<T : Equatable>(object: T, inout fromArray array: [T])
     {
@@ -23,8 +25,8 @@ class CartBrain {
     
     func totalCart() {
         total = 0
-        for item in cartContents {
-            total += (data.productPrice[item] as NSString).floatValue
+        for item in cartProducts {
+            total += (productData.productPrice[item] as NSString).floatValue
         }
     }
 
