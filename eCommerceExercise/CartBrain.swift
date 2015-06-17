@@ -25,9 +25,22 @@ class CartBrain {
     var productTotal: Float = 0
     var voucherTotal: Float = 0
     
+    func totalCart() {
+        productTotal = 0
+        voucherTotal = 0
+        for item in cartProducts {
+            productTotal += (productData.productPrice[item] as NSString).floatValue
+        }
+        for item in cartVouchers {
+            voucherTotal += (voucherData.voucherMoneyOff[item])
+        }
+        total = productTotal - voucherTotal
+    }
+    
     func checkVoucher(selectedVoucher: Int) -> Bool {
         var accepted: Bool = false
-        if Int(total) > voucherData.voucherMinimum[selectedVoucher] {
+        totalCart()
+        if Int(productTotal) > voucherData.voucherMinimum[selectedVoucher] {
             accepted = true
         } else {
             accepted = false
@@ -50,16 +63,6 @@ class CartBrain {
         return accepted
     }
     
-    func totalCart() {
-        productTotal = 0
-        voucherTotal = 0
-        for item in cartProducts {
-            productTotal += (productData.productPrice[item] as NSString).floatValue
-        }
-        for item in cartVouchers {
-            voucherTotal += (voucherData.voucherMoneyOff[item])
-        }
-        total = productTotal - voucherTotal
-    }
+
 
 }

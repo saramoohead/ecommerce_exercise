@@ -47,12 +47,16 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     // add and remove vouchers
     
     var cart = CartBrain()
+    @IBOutlet weak var voucherErrorMessage: UILabel!
     
     func addToCart(sender: UIButton) {
         let selectedVoucher = sender.tag
+        voucherErrorMessage.text = ""
         if cart.checkVoucher(selectedVoucher) {
             cart.cartVouchers.append(selectedVoucher)
-        } else {}
+        } else {
+            voucherErrorMessage.text = "Your order doesn't qualify for this voucher."
+        }
         updateCartDisplay()
         voucherCollection.reloadData()
     }
@@ -68,7 +72,7 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBOutlet weak var cartItemCount: UIButton!
     @IBOutlet weak var cartTotal: UILabel!
-    
+
     func updateCartDisplay() {
         cartItemCount.setTitle("\(cart.cartProducts.count)", forState: UIControlState.Normal)
         cart.totalCart()
