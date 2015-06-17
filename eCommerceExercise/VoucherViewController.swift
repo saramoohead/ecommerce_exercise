@@ -24,5 +24,35 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
         return voucherCell
     }
 
+    // passing cart data between views
+
+    @IBOutlet weak var cartItemCount: UIButton!
+    @IBOutlet weak var cartTotal: UILabel!
+    
+    var passedTotal:String!
+    var passedCartContents:[Int]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        println("*********")
+        println(passedTotal)
+        println(passedCartContents)
+        
+        if passedTotal != nil {
+            cartTotal.text = passedTotal
+            cartItemCount.setTitle("\(passedCartContents.count)", forState: UIControlState.Normal)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "segueFromVouchers") {
+            var svc = segue.destinationViewController as! ProductViewController;
+            
+            svc.passedTotalFromVouchers = passedTotal
+            svc.passedCartContentsFromVouchers = passedCartContents
+            
+        }
+    }
 
 }
