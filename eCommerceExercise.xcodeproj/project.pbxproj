@@ -144,9 +144,7 @@
 				B25255641B2CE0BC00907977 /* ProductList.swift */,
 				B2B7F9791B30E19700C3CEBE /* VoucherList.swift */,
 				B2B7F9A51B32071900C3CEBE /* Product images */,
-				B2B7F9891B319E7D00C3CEBE /* 5poundsoff.png */,
-				B2B7F98A1B319E7D00C3CEBE /* 10poundsoff.png */,
-				B2B7F98B1B319E7D00C3CEBE /* 15poundsoff.png */,
+				B2B7F9A61B32090200C3CEBE /* Voucher images */,
 				B25255701B2D089400907977 /* shoppingbag.png */,
 				B25255621B2CDB6400907977 /* line.png */,
 				B252551C1B2C4B1400907977 /* AppDelegate.swift */,
@@ -193,6 +191,16 @@
 				B252555C1B2CC02900907977 /* ATCS_PB.jpeg */,
 			);
 			name = "Product images";
+			sourceTree = "<group>";
+		};
+		B2B7F9A61B32090200C3CEBE /* Voucher images */ = {
+			isa = PBXGroup;
+			children = (
+				B2B7F9891B319E7D00C3CEBE /* 5poundsoff.png */,
+				B2B7F98A1B319E7D00C3CEBE /* 10poundsoff.png */,
+				B2B7F98B1B319E7D00C3CEBE /* 15poundsoff.png */,
+			);
+			name = "Voucher images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

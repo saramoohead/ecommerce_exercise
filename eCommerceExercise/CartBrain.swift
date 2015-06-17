@@ -29,7 +29,24 @@ class CartBrain {
         var accepted: Bool = false
         if Int(total) > voucherData.voucherMinimum[selectedVoucher] {
             accepted = true
+        } else {
+            accepted = false
         }
+        
+        if voucherData.voucherRequiredProductCategory[selectedVoucher] != "" {
+            var cartCategories = [String]()
+            for item in cartProducts {
+                cartCategories.append(productData.productCategory[item])
+            }
+            var categoryToMatch = voucherData.voucherRequiredProductCategory[selectedVoucher]
+            
+            if find(cartCategories, categoryToMatch) != nil {
+                accepted = true
+            } else {
+                accepted = false
+            }
+        }
+
         return accepted
     }
     
