@@ -87,7 +87,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
             
             svc.passedTotal = cartTotalDisplay.text
             svc.passedCartContents = cart.cartProducts
-            
+            svc.passedVouchers = cart.cartVouchers
         }
     }
     

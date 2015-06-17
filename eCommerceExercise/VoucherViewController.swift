@@ -64,19 +64,20 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     
     // shopping bag "cart" display
     
+    @IBOutlet weak var cartItemCount: UIButton!
+    @IBOutlet weak var cartTotal: UILabel!
+    
     func updateCartDisplay() {
         cartItemCount.setTitle("\(cart.cartProducts.count)", forState: UIControlState.Normal)
         cart.totalCart()
         cartTotal.text = "£" + String.localizedStringWithFormat("%.2f", cart.total)
     }
-
+    
     // passing cart data between views
-
-    @IBOutlet weak var cartItemCount: UIButton!
-    @IBOutlet weak var cartTotal: UILabel!
     
     var passedTotal:String!
     var passedCartContents:[Int]!
+    var passedVouchers:[Int]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +86,10 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
             cartTotal.text = passedTotal
             cart.cartProducts = passedCartContents
             cartItemCount.setTitle("\(cart.cartProducts.count)", forState: UIControlState.Normal)
+        }
+        
+        if passedVouchers != nil {
+            cart.cartVouchers = passedVouchers
         }
     }
     
