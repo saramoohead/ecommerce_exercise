@@ -13,6 +13,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     // set up collection view
     
     var data = ProductList()
+    
     @IBOutlet weak var productCell: UICollectionView!
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -80,27 +81,27 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     
     // pass cart data between views
     
-    var passedTotalFromVouchers:String!
-    var passedCartContentsFromVouchers:[Int]!
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "segueToVouchers") {
-            var svc = segue.destinationViewController as! VoucherViewController;
-            
-            svc.passedTotal = cartTotalDisplay.text
-            svc.passedCartContents = cart.cartContents
-            
-        }
-    }
+//    var passedTotalFromVouchers:String!
+//    var passedCartContentsFromVouchers:[Int]!
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if (segue.identifier == "segueToVouchers") {
+//            var svc = segue.destinationViewController as! VoucherViewController;
+//            
+//            svc.passedTotal = cartTotalDisplay.text
+//            svc.passedCartContents = cart.cartContents
+//            
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if passedTotalFromVouchers != nil {
-            cartTotalDisplay.text = passedTotalFromVouchers
-            cartButton.setTitle("\(passedCartContentsFromVouchers.count)", forState: UIControlState.Normal)
-            cart.cartContents = passedCartContentsFromVouchers
-        }
+//        if passedTotalFromVouchers != nil {
+//            cartTotalDisplay.text = passedTotalFromVouchers
+//            cartButton.setTitle("\(passedCartContentsFromVouchers.count)", forState: UIControlState.Normal)
+//            cart.cartContents = passedCartContentsFromVouchers
+//        }
     }
 
 
