@@ -22,12 +22,19 @@ class CartBrain {
     }
 
     var total: Float = 0
+    var productTotal: Float = 0
+    var voucherTotal: Float = 0
     
     func totalCart() {
-        total = 0
+        productTotal = 0
+        voucherTotal = 0
         for item in cartProducts {
-            total += (productData.productPrice[item] as NSString).floatValue
+            productTotal += (productData.productPrice[item] as NSString).floatValue
         }
+        for item in cartVouchers {
+            voucherTotal += (voucherData.voucherMoneyOff[item])
+        }
+        total = productTotal - voucherTotal
     }
 
 }

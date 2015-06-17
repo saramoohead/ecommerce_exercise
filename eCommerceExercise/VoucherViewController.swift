@@ -44,18 +44,15 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
         return voucherCell
     }
     
+    // add and remove vouchers
+    
     var cart = CartBrain()
     
     func addToCart(sender: UIButton) {
         let selectedVoucher = sender.tag
-        println("***senderTag")
-        println(selectedVoucher)
         cart.cartVouchers.append(selectedVoucher)
         updateCartDisplay()
         voucherCollection.reloadData()
-        println("***addToCart")
-        println(cart.cartProducts)
-        println(cart.cartVouchers)
     }
     
     func removeFromCart(sender: UIButton) {
@@ -63,9 +60,6 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
         cart.removeObject(selectedVoucher, fromArray: &cart.cartVouchers)
         updateCartDisplay()
         voucherCollection.reloadData()
-        println("***removeFromCart")
-        println(cart.cartProducts)
-        println(cart.cartVouchers)
     }
     
     // shopping bag "cart" display
