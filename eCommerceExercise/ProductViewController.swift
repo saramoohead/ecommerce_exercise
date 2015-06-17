@@ -64,8 +64,17 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     func removeFromCart(sender: UIButton) {
         let selectedProduct = sender.tag
         cart.removeObject(selectedProduct, fromArray: &cart.cartProducts)
+        checkVouchersAgain()
         updateCartDisplay()
         productCell.reloadData()
+    }
+    
+    func checkVouchersAgain() {
+        for item in cart.cartVouchers {
+            if cart.checkVoucher(item) == false {
+                cart.removeObject(item, fromArray: &cart.cartVouchers)
+            }
+        }
     }
     
     // shopping bag "cart" display

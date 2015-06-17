@@ -1,5 +1,5 @@
 //
-//  CalculatorBrain.swift
+//  CartBrain.swift
 //  eCommerceExercise
 //
 //  Created by Sara OC on 14/06/2015.
@@ -53,7 +53,7 @@ class CartBrain {
             }
             var categoryToMatch = voucherData.voucherRequiredProductCategory[selectedVoucher]
             
-            if find(cartCategories, categoryToMatch) != nil {
+            if find(cartCategories, categoryToMatch) != nil && accepted != false {
                 accepted = true
             } else {
                 accepted = false
@@ -62,7 +62,5 @@ class CartBrain {
 
         return accepted
     }
-    
-
 
 }
