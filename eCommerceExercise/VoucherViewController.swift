@@ -17,12 +17,12 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBOutlet weak var voucherCollection: UICollectionView!
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.voucherCategory.count
+        return data.voucherDisplayCategory.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let voucherCell = collectionView.dequeueReusableCellWithReuseIdentifier("voucherCell", forIndexPath: indexPath) as! VoucherCollectionViewCell
-        voucherCell.voucherCategory.text = data.voucherCategory[indexPath.row]
+        voucherCell.voucherCategory.text = data.voucherDisplayCategory[indexPath.row]
         voucherCell.voucherConditions.text = data.voucherConditionDescription[indexPath.row]
         voucherCell.voucherImage.image = UIImage(named: data.voucherImage[indexPath.row])
         

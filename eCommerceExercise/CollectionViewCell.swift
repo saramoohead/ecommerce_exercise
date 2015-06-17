@@ -15,10 +15,10 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelNameCell: UILabel!
     @IBOutlet weak var labelDescriptionCell: UILabel!
     @IBOutlet weak var labelPriceCell: UILabel!
+    @IBOutlet weak var labelSalePrice: UILabel!
     @IBOutlet weak var labelStockCell: UILabel!
     @IBOutlet weak var labelGenderCell: UILabel!
     @IBOutlet weak var labelCategoryCell: UILabel!
-
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var removeFromCartButton: UIButton!
 

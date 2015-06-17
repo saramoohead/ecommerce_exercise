@@ -69,10 +69,10 @@
                                                     <rect key="frame" x="8" y="28" width="209" height="187"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqA-rL-Vz0">
-                                                    <rect key="frame" x="8" y="243" width="100" height="21"/>
+                                                    <rect key="frame" x="8" y="243" width="46" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="3u8-u2-jSf"/>
-                                                        <constraint firstAttribute="width" constant="100" id="bTa-1H-Koz"/>
+                                                        <constraint firstAttribute="height" constant="21" id="IP2-rp-009"/>
+                                                        <constraint firstAttribute="width" constant="46" id="L6g-q6-aeH"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,7 +85,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vka-OE-0m4">
-                                                    <rect key="frame" x="8" y="8" width="9.5" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -111,6 +111,12 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkS-bb-49h">
+                                                    <rect key="frame" x="58" y="243" width="54" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -118,21 +124,25 @@
                                             <constraint firstItem="L10-nk-FWv" firstAttribute="top" secondItem="2e7-y8-qzg" secondAttribute="top" id="1Qu-Im-GWK"/>
                                             <constraint firstItem="SvE-0m-9eF" firstAttribute="top" secondItem="L10-nk-FWv" secondAttribute="bottom" constant="14" id="2cw-7U-uXa"/>
                                             <constraint firstItem="gaN-ls-1lJ" firstAttribute="leading" secondItem="2e7-y8-qzg" secondAttribute="leadingMargin" constant="26" id="2ot-0u-8Z9"/>
+                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="baseline" secondItem="lOa-GU-cHa" secondAttribute="baseline" id="7dD-4b-gp8"/>
                                             <constraint firstItem="mvr-7K-5NE" firstAttribute="top" secondItem="SvE-0m-9eF" secondAttribute="bottom" constant="13" id="98J-x2-DCj"/>
+                                            <constraint firstItem="lOa-GU-cHa" firstAttribute="leading" secondItem="FqA-rL-Vz0" secondAttribute="trailing" constant="58" id="9If-ef-edX"/>
+                                            <constraint firstItem="HkS-bb-49h" firstAttribute="firstBaseline" secondItem="FqA-rL-Vz0" secondAttribute="firstBaseline" id="9Oc-UO-yzU"/>
                                             <constraint firstItem="SvE-0m-9eF" firstAttribute="leading" secondItem="2e7-y8-qzg" secondAttribute="leadingMargin" id="9wN-yt-6LO"/>
                                             <constraint firstItem="L10-nk-FWv" firstAttribute="leading" secondItem="2e7-y8-qzg" secondAttribute="leading" id="B1U-kF-Zzk"/>
-                                            <constraint firstItem="lOa-GU-cHa" firstAttribute="leading" secondItem="FqA-rL-Vz0" secondAttribute="trailing" constant="4" id="DZx-hJ-o7K"/>
+                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="leading" secondItem="mvr-7K-5NE" secondAttribute="leading" id="Bvp-3j-K3C"/>
                                             <constraint firstItem="OXx-ra-KoE" firstAttribute="leading" secondItem="mvr-7K-5NE" secondAttribute="leading" id="EnR-Fx-MWk"/>
-                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="top" secondItem="OXx-ra-KoE" secondAttribute="bottom" constant="9" id="NWJ-7z-FO2"/>
+                                            <constraint firstItem="HkS-bb-49h" firstAttribute="leading" secondItem="FqA-rL-Vz0" secondAttribute="trailing" constant="4" id="IJz-LU-Upj"/>
+                                            <constraint firstItem="lOa-GU-cHa" firstAttribute="leading" secondItem="HkS-bb-49h" secondAttribute="trailing" id="Llr-k8-UtI"/>
                                             <constraint firstItem="L10-nk-FWv" firstAttribute="centerX" secondItem="SvE-0m-9eF" secondAttribute="centerX" id="Nai-MN-D8p"/>
                                             <constraint firstItem="mvr-7K-5NE" firstAttribute="trailing" secondItem="OXx-ra-KoE" secondAttribute="trailing" id="PCg-HM-auP"/>
+                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="firstBaseline" secondItem="lOa-GU-cHa" secondAttribute="firstBaseline" id="TYx-J2-ysc"/>
                                             <constraint firstItem="Vka-OE-0m4" firstAttribute="firstBaseline" secondItem="1jD-RX-Ftr" secondAttribute="firstBaseline" constant="-3" id="W7p-Sg-1l7"/>
                                             <constraint firstItem="SvE-0m-9eF" firstAttribute="top" secondItem="1jD-RX-Ftr" secondAttribute="bottom" constant="3" id="XkY-c2-1YJ"/>
-                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="firstBaseline" secondItem="lOa-GU-cHa" secondAttribute="firstBaseline" id="Ywu-kw-Nmb"/>
+                                            <constraint firstItem="tPr-mH-K7h" firstAttribute="top" secondItem="FqA-rL-Vz0" secondAttribute="bottom" constant="5" id="aTd-tC-XMr"/>
                                             <constraint firstItem="1jD-RX-Ftr" firstAttribute="leading" secondItem="Vka-OE-0m4" secondAttribute="trailing" constant="4" id="asS-ZP-Dn1"/>
                                             <constraint firstItem="tPr-mH-K7h" firstAttribute="leading" secondItem="gaN-ls-1lJ" secondAttribute="leading" id="c8t-8L-hv1"/>
                                             <constraint firstItem="tPr-mH-K7h" firstAttribute="trailing" secondItem="gaN-ls-1lJ" secondAttribute="trailing" id="cfg-RE-lsi"/>
-                                            <constraint firstItem="lOa-GU-cHa" firstAttribute="baseline" secondItem="FqA-rL-Vz0" secondAttribute="baseline" id="cqN-Vx-kpV"/>
                                             <constraint firstItem="mvr-7K-5NE" firstAttribute="trailing" secondItem="lOa-GU-cHa" secondAttribute="trailing" id="fyA-Zm-k0f"/>
                                             <constraint firstItem="gaN-ls-1lJ" firstAttribute="top" secondItem="mvr-7K-5NE" secondAttribute="bottom" constant="20" id="g0W-bi-jtu"/>
                                             <constraint firstItem="tPr-mH-K7h" firstAttribute="baseline" secondItem="gaN-ls-1lJ" secondAttribute="baseline" id="gBp-P3-OlH"/>
@@ -141,13 +151,14 @@
                                             <constraint firstItem="Vka-OE-0m4" firstAttribute="baseline" secondItem="1jD-RX-Ftr" secondAttribute="baseline" constant="4" id="i0e-R4-FFp"/>
                                             <constraint firstItem="SvE-0m-9eF" firstAttribute="leading" secondItem="Vka-OE-0m4" secondAttribute="leading" id="ixP-an-OoH"/>
                                             <constraint firstItem="Vka-OE-0m4" firstAttribute="top" secondItem="2e7-y8-qzg" secondAttribute="topMargin" id="k1E-7N-tTD"/>
+                                            <constraint firstItem="HkS-bb-49h" firstAttribute="baseline" secondItem="FqA-rL-Vz0" secondAttribute="baseline" id="lhD-ua-A9V"/>
                                             <constraint firstAttribute="trailing" secondItem="L10-nk-FWv" secondAttribute="trailing" id="pOT-Fa-83W"/>
                                             <constraint firstItem="gaN-ls-1lJ" firstAttribute="centerX" secondItem="mvr-7K-5NE" secondAttribute="centerX" id="qSO-Zj-6ye"/>
                                             <constraint firstItem="OXx-ra-KoE" firstAttribute="leading" secondItem="SvE-0m-9eF" secondAttribute="leading" id="sCk-by-kMX"/>
+                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="top" secondItem="OXx-ra-KoE" secondAttribute="bottom" constant="9" id="sde-ub-ey3"/>
                                             <constraint firstItem="OXx-ra-KoE" firstAttribute="top" secondItem="SvE-0m-9eF" secondAttribute="bottom" constant="-5" id="tDT-gy-nfW"/>
                                             <constraint firstItem="L10-nk-FWv" firstAttribute="centerX" secondItem="1jD-RX-Ftr" secondAttribute="centerX" constant="-7" id="tW1-fn-XaB"/>
-                                            <constraint firstItem="gaN-ls-1lJ" firstAttribute="top" secondItem="FqA-rL-Vz0" secondAttribute="bottom" constant="5" id="tzR-Be-nGZ"/>
-                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="leading" secondItem="mvr-7K-5NE" secondAttribute="leading" id="uGi-ZU-9yJ"/>
+                                            <constraint firstItem="FqA-rL-Vz0" firstAttribute="leading" secondItem="Vka-OE-0m4" secondAttribute="leading" id="wcT-gd-oOV"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -164,6 +175,7 @@
                                             <outlet property="labelGenderCell" destination="Vka-OE-0m4" id="eeP-Ct-sfH"/>
                                             <outlet property="labelNameCell" destination="OXx-ra-KoE" id="0Pc-N3-8v7"/>
                                             <outlet property="labelPriceCell" destination="FqA-rL-Vz0" id="aMK-hd-cGT"/>
+                                            <outlet property="labelSalePrice" destination="HkS-bb-49h" id="sO5-49-xTa"/>
                                             <outlet property="labelStockCell" destination="lOa-GU-cHa" id="eYP-xo-Uqw"/>
                                             <outlet property="removeFromCartButton" destination="tPr-mH-K7h" id="wjD-DI-tx0"/>
                                         </connections>
