@@ -9,7 +9,7 @@
 import Foundation
 
 class CartBrain {
-
+    
     var cartProducts = [Int]()
     var cartVouchers = [Int]()
     var productData = ProductList()
@@ -63,18 +63,24 @@ class CartBrain {
         return accepted
     }
     
-    func checkStock(selectedProduct: Int) -> Bool {
-        var accepted: Bool = false
+    func checkStock(selectedProduct: Int) -> (newStockList: [String], accepted: Bool) {
+        var result: (newStockList:[String], accepted: Bool)
+
+        result.newStockList = []
+        result.accepted = false
         
-        var availableStock = (productData.productStock[selectedProduct]).toInt()
+        var availableStock = (productData.productStock[selectedProduct]).toInt()!
         
         if availableStock > 0 {
-            accepted = true
+            productData.productStock[selectedProduct] = "\(availableStock - 1)"
+            result.newStockList = productData.productStock
+            result.accepted = true
+            
         } else {
-            accepted = false
+            result.accepted = false
         }
-        
-        return accepted
+
+        return result
     }
 
 }

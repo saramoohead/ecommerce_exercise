@@ -43,6 +43,6 @@ class ProductList {
     let productImage: [String] = ["ATCS_PB.jpeg", "SS_B.png", "LDSL_T.jpeg", "FF-R.jpg", "FF-B.jpg", "GBC_B.jpg", "CS_MR.jpg", "FSSSS_Grey.jpg", "FSSSS_Green.jpg", "SW_C.jpg", "LPPB_D.jpg", "BPD_B.jpg", "MTCD_P.jpg"]
     let productPrice: [String] = ["99.00", "42.00", "34.00", "19.00", "19.00", "167.00", "30.00", "49.99", "49.99", "75.00", "175.50", "270.00", "540.00"]
     let productSalePrice: [String] = ["", "", "", "", "", "", "", "", "39.99", "", "", "", ""]
-    let productStock: [String] = ["5", "4", "12", "6", "0", "6", "5", "9", "3", "2", "1", "10", "5"]
+    var productStock: [String] = ["5", "4", "12", "6", "0", "6", "5", "9", "3", "2", "1", "10", "5"]
 
 }

@@ -12,6 +12,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     
     // product collection view set up
     
+    var cart = CartBrain()
     var data = ProductList()
     
     @IBOutlet weak var productCell: UICollectionView!
@@ -52,7 +53,6 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     
     // add and remove from cart
     
-    var cart = CartBrain()
     @IBOutlet weak var productErrorMessage: UILabel!
     
     func addToCart(sender: UIButton) {
@@ -72,8 +72,11 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func checkStock(selectedProduct: Int) {
-        if cart.checkStock(selectedProduct) {
+        var resultOfStockCheck = cart.checkStock(selectedProduct)
+        
+        if resultOfStockCheck.accepted {
             cart.cartProducts.append(selectedProduct)
+            data.productStock = resultOfStockCheck.newStockList
         } else {
             productErrorMessage.text = "That item is out of stock."
         }
@@ -99,7 +102,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     // pass cart data between views
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "segueToVouchers") {
             var svc = segue.destinationViewController as! VoucherViewController;
