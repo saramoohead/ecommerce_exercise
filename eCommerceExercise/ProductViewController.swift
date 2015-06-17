@@ -93,6 +93,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     
     var passedTotalFromVouchers:String!
     var passedCartContentsFromVouchers:[Int]!
+    var passedCartVouchersFromVouchers:[Int]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +102,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
             cartTotalDisplay.text = passedTotalFromVouchers
             cartButton.setTitle("\(passedCartContentsFromVouchers.count)", forState: UIControlState.Normal)
             cart.cartProducts = passedCartContentsFromVouchers
+            cart.cartVouchers = passedCartVouchersFromVouchers
         }
     }
 

@@ -92,8 +92,9 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
         if (segue.identifier == "segueFromVouchers") {
             var svc = segue.destinationViewController as! ProductViewController;
             
-            svc.passedTotalFromVouchers = passedTotal
-            svc.passedCartContentsFromVouchers = passedCartContents
+            svc.passedTotalFromVouchers = cartTotal.text
+            svc.passedCartContentsFromVouchers = cart.cartProducts
+            svc.passedCartVouchersFromVouchers = cart.cartVouchers
             
         }
     }
