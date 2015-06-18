@@ -129,28 +129,13 @@ describe("User is alerted if they try to add an invalid voucher", function() {
 
 }, "verbose");
 
-describe("User is unable to add out of stock items to cart", function() {
-
-    it("taps the Back to shopping button", function() {
-        tapButton("toShoppingView");
-    });
-    
-    it("scrolls down a little bit", function() {
-        saraSwipe()
-    });
-         
-    it("taps on a product that is out of stock", function() {
-        tapButtonInDesignatedCollectionCell(4, "Add to cart");
-    });
-
-    it("sees an error message", function() {
-        readText("This item is out of stock.");
-    });
-
-}, "verbose");
 
 describe("User sees stock decrease when added to their cart", function() {
     
+    it("taps the Back to shopping button", function() {
+        tapButton("toShoppingView");
+    });
+         
     it("sees the availability of an item", function() {
         readTextInDesignatedCollectionCell(0, "5 available");
     });
@@ -164,3 +149,19 @@ describe("User sees stock decrease when added to their cart", function() {
     });
          
 }, "verbose");
+
+describe("User is unable to add out of stock items to cart", function() {
+         
+    it("scrolls down", function() {
+        swipe("up")
+    });
+     
+    it("taps on a product that is out of stock", function() {
+        tapButtonInDesignatedCollectionCell(4, "Add to cart");
+    });
+     
+    it("sees an error message", function() {
+        readText("This item is out of stock.");
+    });
+         
+ }, "verbose");

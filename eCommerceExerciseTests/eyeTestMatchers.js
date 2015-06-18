@@ -130,7 +130,7 @@ function readTextInDesignatedCollectionCell(cell, text) {
     var collectionCellArray = view.collectionViews()[0].cells();
 
     chosenCell = collectionCellArray[cell];
-    if (choseCell.staticTexts()[text].isValid()) {
+    if (chosenCell.staticTexts()[text].isValid()) {
         textFound = true;
     }
 
