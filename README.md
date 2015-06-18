@@ -31,7 +31,7 @@ The brief did not require use of a database but, after building, I think it must
 - open `eCommerceExercise.project`
 - run the build into the simulator with the device of your choice
 
-## To install and run the feature tests
+## To install and run the feature tests (gif demo below)
 - after the project has been successfully built into the simulator, shortcut: `⌘R`
 - stop the simulator, shortcut: `⌘.`
 - launch Instruments, shortcut: `⌘i`
@@ -41,3 +41,4 @@ The brief did not require use of a database but, after building, I think it must
 - the script will appear in the bottom left window
 - hit the play button at the bottom of the screen to see the test messages
 
+<img src="eCommerceExercise/app_feature_tests.gif">
