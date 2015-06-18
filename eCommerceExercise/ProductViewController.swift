@@ -29,7 +29,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.labelGenderCell.text = data.productGender[indexPath.row]
         cell.labelCategoryCell.text = data.productCategory[indexPath.row]
         cell.labelPriceCell.text = "£" + data.productPrice[indexPath.row]
-        if data.productSalePrice[indexPath.row] != "" {
+        if data.productSalePrice[indexPath.row] != data.productPrice[indexPath.row] {
             cell.labelSalePrice.text = "Sale! £" + data.productSalePrice[indexPath.row]
         } else {
             cell.labelSalePrice.text = nil

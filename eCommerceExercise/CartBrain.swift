@@ -29,7 +29,7 @@ class CartBrain {
         productTotal = 0
         voucherTotal = 0
         for item in cartProducts {
-            productTotal += (productData.productPrice[item] as NSString).floatValue
+            productTotal += (productData.productSalePrice[item] as NSString).floatValue
         }
         for item in cartVouchers {
             voucherTotal += (voucherData.voucherMoneyOff[item])
