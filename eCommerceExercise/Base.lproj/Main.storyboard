@@ -291,12 +291,14 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-g6-CpA">
                                                     <rect key="frame" x="34" y="234" width="157" height="32"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration" label="removeFromCartButton"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <state key="normal" title="Remove from cart"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-i3-3gy">
                                                     <rect key="frame" x="34" y="234" width="157" height="32"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration" label="addToCartButton"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="157" id="ITi-5y-dki"/>
                                                         <constraint firstAttribute="height" constant="32" id="PjB-9j-Wck"/>

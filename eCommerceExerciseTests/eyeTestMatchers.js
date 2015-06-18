@@ -49,11 +49,21 @@ function testFailure(failString) {
     UIALogger.logFail("______FAIL: " + failString);
 }
 
+// matchers
+
 function readText(text) {
     if (view.staticTexts()[text].isValid()) {
         testPass("Found text '" + text + "'");
     } else {
         testFailure("Could not find text '" + text + "'");
+    }
+}
+
+function readButtonText(text) {
+    if (view.buttons()[text].isValid()) {
+        testPass("Found button text '" + text + "'");
+    } else {
+        testFailure("Could not find button text '" + text + "'");
     }
 }
 
@@ -95,3 +105,53 @@ function swipe(direction, on) {
     }
 }
 
+// collection matchers
+
+function readTextInCollection(text) {
+    var textFound = false;
+    var cell;
+    var collectionCellArray = view.collectionViews()[0].cells();
+    for (var i = 0; i < collectionCellArray.length; i ++) {
+        cell = collectionCellArray[i];
+        if (cell.staticTexts()[text].isValid()) {
+            textFound = true;
+            break;
+        }
+    }
+    if (textFound) {
+        testPass("Found text '" + text + "'");
+    } else {
+        testFailure("Could not find text '" + text + "'");
+    }
+}
+
+function findButtonInDesignatedCollectionCell(cell, button) {
+    var buttonFound = false;
+//    var cell;
+    var collectionCellArray = view.collectionViews()[0].cells();
+
+    chosenCell = collectionCellArray[cell];
+    if (chosenCell.buttons()[button].isValid()) {
+        buttonFound = true;
+    }
+
+    if (buttonFound) {
+        testPass("Found button '" + button + "'");
+    } else {
+        testFailure("Could not find button '" + button + "'");
+    }
+}
+
+function tapButtonInDesignatedCollectionCell(cell, button) {
+//    var cell;
+    var collectionCellArray = view.collectionViews()[0].cells();
+    
+    chosenCell = collectionCellArray[cell];
+    var buttonToTap = chosenCell.buttons()[button];
+    if (buttonToTap.isValid()) {
+        buttonToTap.tap();
+        testPass("Tapped button '" + button + "'");
+    } else {
+        testFailure("Could not find button '" + button + "'");
+    }
+}
