@@ -203,8 +203,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnb-kV-mWS">
-                                <rect key="frame" x="16" y="69" width="57" height="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnb-kV-mWS">
+                                <rect key="frame" x="16" y="20" width="57" height="75"/>
+                                <accessibility key="accessibilityConfiguration" label="toVouchersView"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <state key="normal" title="Vouchers?">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -227,7 +228,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5yW-rP-cOX" secondAttribute="trailing" constant="14" id="6hv-7Q-nLg"/>
-                            <constraint firstItem="Ph9-MY-T2L" firstAttribute="leading" secondItem="jnb-kV-mWS" secondAttribute="leading" id="6kt-rg-JXz"/>
+                            <constraint firstItem="jnb-kV-mWS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AQa-V8-gQJ"/>
                             <constraint firstItem="XJZ-FG-WvS" firstAttribute="trailing" secondItem="5yW-rP-cOX" secondAttribute="trailing" id="FUq-rl-y5S"/>
                             <constraint firstItem="x4H-lz-jh0" firstAttribute="centerX" secondItem="jSo-Sm-1GF" secondAttribute="centerX" id="GN1-q9-qfR"/>
                             <constraint firstAttribute="centerX" secondItem="jSo-Sm-1GF" secondAttribute="centerX" constant="-0.5" id="KFx-HZ-3Xa"/>
@@ -235,15 +236,16 @@
                             <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="5yW-rP-cOX" secondAttribute="bottom" constant="21" id="TZd-EG-D6e"/>
                             <constraint firstItem="Ph9-MY-T2L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="XmJ-fO-FtR"/>
                             <constraint firstItem="x4H-lz-jh0" firstAttribute="trailing" secondItem="Ph9-MY-T2L" secondAttribute="trailing" id="ZZR-Ss-d1Y"/>
-                            <constraint firstItem="jnb-kV-mWS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="aFZ-vY-Eo3"/>
                             <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="Ph9-MY-T2L" secondAttribute="bottom" constant="7" id="cKq-tj-SF2"/>
                             <constraint firstItem="x4H-lz-jh0" firstAttribute="leading" secondItem="Ph9-MY-T2L" secondAttribute="leading" id="etJ-az-h3i"/>
                             <constraint firstItem="XJZ-FG-WvS" firstAttribute="leading" secondItem="5yW-rP-cOX" secondAttribute="leading" id="l2p-YD-5Sq"/>
                             <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="XJZ-FG-WvS" secondAttribute="bottom" constant="25" id="pN8-kZ-aaT"/>
                             <constraint firstAttribute="centerY" secondItem="jSo-Sm-1GF" secondAttribute="centerY" constant="0.5" id="rOj-rD-yr7"/>
+                            <constraint firstItem="jnb-kV-mWS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tLc-df-vFx"/>
+                            <constraint firstItem="jnb-kV-mWS" firstAttribute="leading" secondItem="Ph9-MY-T2L" secondAttribute="leading" id="uTP-cZ-YPN"/>
                             <constraint firstItem="XJZ-FG-WvS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="uoR-RL-pTg"/>
-                            <constraint firstItem="jnb-kV-mWS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wii-Hs-D3b"/>
                             <constraint firstItem="x4H-lz-jh0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="z7Q-4q-SpH"/>
+                            <constraint firstItem="x4H-lz-jh0" firstAttribute="top" secondItem="jnb-kV-mWS" secondAttribute="bottom" constant="22" id="zR4-Rv-RUl"/>
                         </constraints>
                     </view>
                     <connections>
@@ -291,14 +293,14 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZI-g6-CpA">
                                                     <rect key="frame" x="34" y="234" width="157" height="32"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
-                                                    <accessibility key="accessibilityConfiguration" label="removeFromCartButton"/>
+                                                    <accessibility key="accessibilityConfiguration" label="removeVoucherFromCartButton"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <state key="normal" title="Remove from cart"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-i3-3gy">
                                                     <rect key="frame" x="34" y="234" width="157" height="32"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
-                                                    <accessibility key="accessibilityConfiguration" label="addToCartButton"/>
+                                                    <accessibility key="accessibilityConfiguration" label="addVoucherToCartButton"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="157" id="ITi-5y-dki"/>
                                                         <constraint firstAttribute="height" constant="32" id="PjB-9j-Wck"/>
@@ -390,8 +392,8 @@
                                     <outlet property="delegate" destination="xdu-pU-pUt" id="fpp-c5-UAg"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir9-EM-fIr">
-                                <rect key="frame" x="16" y="69" width="95" height="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir9-EM-fIr">
+                                <rect key="frame" x="16" y="20" width="95" height="75"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <state key="normal" title="Back to shopping">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -434,16 +436,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OWd-hy-HOB" firstAttribute="top" secondItem="rrJ-pg-H2n" secondAttribute="bottom" constant="72" id="1sC-RQ-SFh"/>
+                            <constraint firstItem="ir9-EM-fIr" firstAttribute="leading" secondItem="OWd-hy-HOB" secondAttribute="leading" id="2E5-Eu-q7z"/>
                             <constraint firstItem="FPO-If-1ii" firstAttribute="top" secondItem="OWd-hy-HOB" secondAttribute="bottom" id="4lD-Me-ChR"/>
                             <constraint firstItem="u55-GM-gNL" firstAttribute="trailing" secondItem="wiM-vf-E59" secondAttribute="trailing" id="6Bt-Cu-cbN"/>
                             <constraint firstItem="FPO-If-1ii" firstAttribute="trailing" secondItem="g27-8W-gpW" secondAttribute="trailingMargin" id="BKN-hs-FXY"/>
                             <constraint firstItem="u55-GM-gNL" firstAttribute="leading" secondItem="wiM-vf-E59" secondAttribute="leading" id="BgG-Ul-eWa"/>
-                            <constraint firstItem="OWd-hy-HOB" firstAttribute="leading" secondItem="ir9-EM-fIr" secondAttribute="leading" id="EWX-70-b2E"/>
+                            <constraint firstItem="FPO-If-1ii" firstAttribute="top" secondItem="ir9-EM-fIr" secondAttribute="bottom" constant="17" id="Brv-xj-DEP"/>
+                            <constraint firstItem="ir9-EM-fIr" firstAttribute="leading" secondItem="FPO-If-1ii" secondAttribute="leading" id="DPl-KN-mQ5"/>
                             <constraint firstItem="OWd-hy-HOB" firstAttribute="trailing" secondItem="FPO-If-1ii" secondAttribute="trailing" id="L7f-LN-E0g"/>
-                            <constraint firstItem="wiM-vf-E59" firstAttribute="bottom" secondItem="ir9-EM-fIr" secondAttribute="bottom" id="SMb-Pg-0Pq"/>
-                            <constraint firstItem="FPO-If-1ii" firstAttribute="leading" secondItem="ir9-EM-fIr" secondAttribute="leading" id="Wnl-0O-nxz"/>
-                            <constraint firstItem="ir9-EM-fIr" firstAttribute="top" secondItem="rrJ-pg-H2n" secondAttribute="bottom" constant="49" id="g41-7S-MQu"/>
-                            <constraint firstItem="ir9-EM-fIr" firstAttribute="leading" secondItem="g27-8W-gpW" secondAttribute="leadingMargin" id="jsY-uP-YTz"/>
+                            <constraint firstItem="ir9-EM-fIr" firstAttribute="bottom" secondItem="wiM-vf-E59" secondAttribute="bottom" id="SJl-bp-YVX"/>
+                            <constraint firstItem="ir9-EM-fIr" firstAttribute="top" secondItem="rrJ-pg-H2n" secondAttribute="bottom" id="YfF-pq-WFX"/>
+                            <constraint firstItem="ir9-EM-fIr" firstAttribute="leading" secondItem="g27-8W-gpW" secondAttribute="leadingMargin" id="cjx-sJ-YBG"/>
                             <constraint firstItem="wiM-vf-E59" firstAttribute="top" secondItem="rrJ-pg-H2n" secondAttribute="bottom" constant="54" id="njH-Oe-7Ol"/>
                             <constraint firstItem="u55-GM-gNL" firstAttribute="top" secondItem="rrJ-pg-H2n" secondAttribute="bottom" constant="4" id="rCf-EI-NHm"/>
                             <constraint firstItem="FPO-If-1ii" firstAttribute="bottom" secondItem="Ulb-xe-hMz" secondAttribute="top" id="st1-cZ-s9c"/>
