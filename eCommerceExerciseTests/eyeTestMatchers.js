@@ -125,9 +125,24 @@ function readTextInCollection(text) {
     }
 }
 
+function readTextInDesignatedCollectionCell(cell, text) {
+    var textFound = false;
+    var collectionCellArray = view.collectionViews()[0].cells();
+
+    chosenCell = collectionCellArray[cell];
+    if (choseCell.staticTexts()[text].isValid()) {
+        textFound = true;
+    }
+
+    if (textFound) {
+        testPass("Found text '" + text + "'");
+    } else {
+        testFailure("Could not find text '" + text + "'");
+    }
+}
+
 function findButtonInDesignatedCollectionCell(cell, button) {
     var buttonFound = false;
-//    var cell;
     var collectionCellArray = view.collectionViews()[0].cells();
 
     chosenCell = collectionCellArray[cell];
@@ -143,11 +158,11 @@ function findButtonInDesignatedCollectionCell(cell, button) {
 }
 
 function tapButtonInDesignatedCollectionCell(cell, button) {
-//    var cell;
     var collectionCellArray = view.collectionViews()[0].cells();
     
     chosenCell = collectionCellArray[cell];
     var buttonToTap = chosenCell.buttons()[button];
+
     if (buttonToTap.isValid()) {
         buttonToTap.tap();
         testPass("Tapped button '" + button + "'");

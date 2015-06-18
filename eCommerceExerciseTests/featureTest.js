@@ -89,12 +89,78 @@ describe("User sees vouchers deductions included in total", function() {
          
     it("taps the £10 off button", function() {
         tapButtonInDesignatedCollectionCell(1, "addVoucherToCartButton");
-        });
-     
-    it("sees the correct total", function() {
+    });
+    
+    it("sees the correct total (including the £5 off from previous test)", function() {
         readText("£126.00");
     });
          
 }, "verbose");
 
+describe("Voucher is removed if qualifying items are removed", function() {
 
+    it("taps the Back to shopping button", function() {
+        tapButton("toShoppingView");
+    });
+         
+    it("removes qualifying item", function() {
+        tapButtonInDesignatedCollectionCell(0, "Remove from cart");
+    });
+     
+    it("sees the correct total with only the £5 off voucher included", function() {
+        readText("£37.00");
+    });
+
+}, "verbose");
+
+describe("User is alerted if they try to add an invalid voucher", function() {
+         
+    it("taps the Vouchers? button", function() {
+        tapButton("toVouchersView");
+    });
+     
+    it("taps the £10 off if order is over £50 button", function() {
+        tapButtonInDesignatedCollectionCell(1, "addVoucherToCartButton");
+    });
+     
+    it("sees an error message", function() {
+        readText("Your order doesn't qualify for this voucher.");
+    });
+
+}, "verbose");
+
+describe("User is unable to add out of stock items to cart", function() {
+
+    it("taps the Back to shopping button", function() {
+        tapButton("toShoppingView");
+    });
+    
+    it("scrolls down a little bit", function() {
+        saraSwipe()
+    });
+         
+    it("taps on a product that is out of stock", function() {
+        tapButtonInDesignatedCollectionCell(4, "Add to cart");
+    });
+
+    it("sees an error message", function() {
+        readText("This item is out of stock.");
+    });
+
+}, "verbose");
+
+describe("User sees stock decrease when added to their cart", function() {
+    
+    it("sees the availability of an item", function() {
+        readTextInDesignatedCollectionCell(0, "5 available");
+    });
+    
+    it("adds that item to cart", function() {
+        tapButtonInDesignatedCollectionCell(0, "Add to cart");
+    });
+         
+    it("sees the availability descrease by one", function() {
+        readTextInDesignatedCollectionCell(0, "4 available");
+    });
+         
+}, "verbose");
