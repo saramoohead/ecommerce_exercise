@@ -17,7 +17,7 @@ The app looks as good in portrait or landscape, on any iPhone or iPad device. Mu
 Testing is done with automation using <a href="https://github.com/james-miller/eyeTest">the new eyeTest tool</a>, which uses Javascript instructions via Instruments to automate the testing of the user stories, in RSpec style. While building the tests, I added some of my own collection view test methods, but unfortunately the automated scrolling function doesn't scroll far enough to pass my stock check user story. You can see this functionality working in the simulator.
 
 ## Technical improvements:
-The brief did not require use of a database but, after building, I think it must be easier to use CoreData to share the cart and stock information. I am particularly unhappy with calling two instantiations of ProductList() (one in the Cart Brain and one in ProductViewController). 
+The brief did not require use of a database but, after building, I think it must be easier to use CoreData or a Rails back end to share the cart and stock information. I am particularly unhappy with calling two instantiations of ProductList() (one in the Cart Brain and one in ProductViewController). 
 
 ## Future plans, extending the brief:
  - build the buy/checkout screen
