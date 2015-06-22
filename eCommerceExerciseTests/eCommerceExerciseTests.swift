@@ -26,15 +26,14 @@ class eCommerceExerciseTests: XCTestCase {
     }
     
     func testStartsWithAnEmptyCart() {
-        let itemsInCart = cart.cartProducts.count
-        XCTAssertEqual(itemsInCart, 0, "Cart begins empty")
+        let cartCount = cart.cartProducts.count
+        XCTAssertEqual(cartCount, 0, "Cart begins empty")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testAddsItemToCart() {
+        cart.cartProducts.append(0)
+        let cartCount = cart.cartProducts.count
+        XCTAssertEqual(cartCount, 1, "Cart accepts new items")
     }
-    
+
 }
