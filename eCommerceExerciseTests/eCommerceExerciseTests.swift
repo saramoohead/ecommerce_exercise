@@ -30,10 +30,16 @@ class eCommerceExerciseTests: XCTestCase {
         XCTAssertEqual(cartCount, 0, "Cart begins empty")
     }
     
-    func testAddsItemToCart() {
+    func testAddItemToCart() {
         cart.cartProducts.append(0)
         let cartCount = cart.cartProducts.count
         XCTAssertEqual(cartCount, 1, "Cart accepts new items")
+    }
+    
+    func testRemoveItemFromCart() {
+        cart.cartProducts.append(0)
+        cart.removeObject(0, fromArray: &cart.cartProducts)
+        let cartCount = cart.cartProducts.count
     }
 
 }
