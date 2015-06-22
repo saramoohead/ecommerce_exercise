@@ -11,6 +11,10 @@ import XCTest
 
 class eCommerceExerciseTests: XCTestCase {
     
+    let brain = CartBrain()
+    let productVC = ProductViewController()
+    let productView = CollectionViewCell()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,9 +25,11 @@ class eCommerceExerciseTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func canAddItemToCart() {
+        
+//        let addToCart = productVC.addToCart(productView.addToCartButton.tag)
+//        let itemsInCart = brain.cartProducts.count
+//        XCTAssertEqual(addToCart, itemsInCart == 1, "Can add item to cart")
     }
     
     func testPerformanceExample() {

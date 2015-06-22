@@ -9,7 +9,7 @@
         <!--Product View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProductViewController" customModule="eCommerceExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductViewStoryboard" id="BYZ-38-t0r" customClass="ProductViewController" customModule="eCommerceExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -262,7 +262,7 @@
         <!--Voucher View Controller-->
         <scene sceneID="Xvy-xq-mYP">
             <objects>
-                <viewController id="xdu-pU-pUt" userLabel="Voucher View Controller" customClass="VoucherViewController" customModule="eCommerceExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VoucherViewStoryboard" id="xdu-pU-pUt" userLabel="Voucher View Controller" customClass="VoucherViewController" customModule="eCommerceExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rrJ-pg-H2n"/>
                         <viewControllerLayoutGuide type="bottom" id="Ulb-xe-hMz"/>

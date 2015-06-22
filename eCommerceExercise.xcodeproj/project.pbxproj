@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2138E901B37EBC4007E0812 /* CartBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25255661B2D002800907977 /* CartBrain.swift */; };
+		B2138E911B37EC67007E0812 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252551E1B2C4B1400907977 /* ProductViewController.swift */; };
+		B2138E921B37EC69007E0812 /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F97F1B316E8000C3CEBE /* VoucherViewController.swift */; };
+		B2138E931B37ECFD007E0812 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25255641B2CE0BC00907977 /* ProductList.swift */; };
+		B2138E941B37ED00007E0812 /* VoucherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F9791B30E19700C3CEBE /* VoucherList.swift */; };
+		B2138E951B37ED0B007E0812 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252555A1B2CBB7500907977 /* CollectionViewCell.swift */; };
+		B2138E961B37ED10007E0812 /* VoucherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7F9811B31759E00C3CEBE /* VoucherCollectionViewCell.swift */; };
+		B2138E971B37F143007E0812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25255201B2C4B1400907977 /* Main.storyboard */; };
 		B22A500E1B32BE7300EF2AE7 /* 87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = B22A4FFD1B32BE7300EF2AE7 /* 87x87.png */; };
 		B22A500F1B32BE7300EF2AE7 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = B22A4FFE1B32BE7300EF2AE7 /* 57x57.png */; };
 		B22A50101B32BE7300EF2AE7 /* 180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = B22A4FFF1B32BE7300EF2AE7 /* 180x180.png */; };
@@ -402,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2138E971B37F143007E0812 /* Main.storyboard in Resources */,
 				B25255571B2CB20800907977 /* featureTest.js in Resources */,
 				B2B7F9A91B324B5600C3CEBE /* eyeTestMatchers.js in Resources */,
 			);
@@ -429,6 +438,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2138E941B37ED00007E0812 /* VoucherList.swift in Sources */,
+				B2138E911B37EC67007E0812 /* ProductViewController.swift in Sources */,
+				B2138E931B37ECFD007E0812 /* ProductList.swift in Sources */,
+				B2138E951B37ED0B007E0812 /* CollectionViewCell.swift in Sources */,
+				B2138E921B37EC69007E0812 /* VoucherViewController.swift in Sources */,
+				B2138E961B37ED10007E0812 /* VoucherCollectionViewCell.swift in Sources */,
+				B2138E901B37EBC4007E0812 /* CartBrain.swift in Sources */,
 				B25255331B2C4B1400907977 /* eCommerceExerciseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
