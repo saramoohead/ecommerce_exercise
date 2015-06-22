@@ -11,7 +11,7 @@ import XCTest
 
 class eCommerceExerciseTests: XCTestCase {
     
-    let brain = CartBrain()
+    let cart = CartBrain()
     let productVC = ProductViewController()
     let productView = CollectionViewCell()
     
@@ -25,11 +25,9 @@ class eCommerceExerciseTests: XCTestCase {
         super.tearDown()
     }
     
-    func canAddItemToCart() {
-        
-//        let addToCart = productVC.addToCart(productView.addToCartButton.tag)
-//        let itemsInCart = brain.cartProducts.count
-//        XCTAssertEqual(addToCart, itemsInCart == 1, "Can add item to cart")
+    func testStartsWithAnEmptyCart() {
+        let itemsInCart = cart.cartProducts.count
+        XCTAssertEqual(itemsInCart, 0, "Cart begins empty")
     }
     
     func testPerformanceExample() {

@@ -62,8 +62,6 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func addToCart(sender: UIButton) {
         let selectedProduct = sender.tag
-        println("******")
-        println(selectedProduct)
         productErrorMessage.text = ""
         self.checkStock(selectedProduct)
         updateCartDisplay()
