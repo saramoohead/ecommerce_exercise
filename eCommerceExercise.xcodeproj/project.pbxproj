@@ -156,7 +156,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B22A501F1B32BE8500EF2AE7 /* Icons */ = {
+		B22A501F1B32BE8500EF2AE7 /* App icons */ = {
 			isa = PBXGroup;
 			children = (
 				B22A50031B32BE7300EF2AE7 /* 29x29.png */,
@@ -178,7 +178,7 @@
 				B22A4FFF1B32BE7300EF2AE7 /* 180x180.png */,
 				B22A50011B32BE7300EF2AE7 /* 152x152.png */,
 			);
-			name = Icons;
+			name = "App icons";
 			sourceTree = "<group>";
 		};
 		B252550E1B2C4B1400907977 = {
@@ -216,19 +216,16 @@
 		B252551A1B2C4B1400907977 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B22A501F1B32BE8500EF2AE7 /* Icons */,
 				B25255641B2CE0BC00907977 /* ProductList.swift */,
 				B2B7F9791B30E19700C3CEBE /* VoucherList.swift */,
 				B2B7F9A51B32071900C3CEBE /* Product images */,
 				B2B7F9A61B32090200C3CEBE /* Voucher images */,
-				B25255701B2D089400907977 /* shoppingbag.png */,
-				B25255621B2CDB6400907977 /* line.png */,
+				B292CBCC1B3AB43F00FEACAD /* Decorations */,
+				B22A501F1B32BE8500EF2AE7 /* App icons */,
 				B252551C1B2C4B1400907977 /* AppDelegate.swift */,
 				B25255231B2C4B1400907977 /* Images.xcassets */,
 				B252551B1B2C4B1400907977 /* Info.plist */,
-				B22A50241B32CACA00EF2AE7 /* ecommerce_appdemo_small.gif */,
-				B22A50221B32C7D800EF2AE7 /* ecommerce_appdemo.gif */,
-				B22A50261B32DA3700EF2AE7 /* app_feature_tests.gif */,
+				B292CBCB1B3AB42200FEACAD /* Github demo gifs */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,6 +247,25 @@
 				B25255311B2C4B1400907977 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B292CBCB1B3AB42200FEACAD /* Github demo gifs */ = {
+			isa = PBXGroup;
+			children = (
+				B22A50241B32CACA00EF2AE7 /* ecommerce_appdemo_small.gif */,
+				B22A50221B32C7D800EF2AE7 /* ecommerce_appdemo.gif */,
+				B22A50261B32DA3700EF2AE7 /* app_feature_tests.gif */,
+			);
+			name = "Github demo gifs";
+			sourceTree = "<group>";
+		};
+		B292CBCC1B3AB43F00FEACAD /* Decorations */ = {
+			isa = PBXGroup;
+			children = (
+				B25255701B2D089400907977 /* shoppingbag.png */,
+				B25255621B2CDB6400907977 /* line.png */,
+			);
+			name = Decorations;
 			sourceTree = "<group>";
 		};
 		B2B7F9A51B32071900C3CEBE /* Product images */ = {
