@@ -23,21 +23,25 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+        
+        // product cell attributes
         cell.labelNameCell.text = data.productTitle[indexPath.row]
-        cell.labelNameCell.adjustsFontSizeToFitWidth = true;
+            cell.labelNameCell.adjustsFontSizeToFitWidth = true;
         cell.labelDescriptionCell.text = data.productDescription[indexPath.row]
         cell.labelGenderCell.text = data.productGender[indexPath.row]
         cell.labelCategoryCell.text = data.productCategory[indexPath.row]
+        cell.labelStockCell.text = data.productStock[indexPath.row] + " available"
+        cell.imageCell.image = UIImage(named: data.productImage[indexPath.row])
+        
+        // product pricing with sale price logic
         cell.labelPriceCell.text = "£" + data.productPrice[indexPath.row]
         if data.productSalePrice[indexPath.row] != data.productPrice[indexPath.row] {
             cell.labelSalePrice.text = "Sale! £" + data.productSalePrice[indexPath.row]
         } else {
             cell.labelSalePrice.text = nil
         }
-        cell.labelStockCell.text = data.productStock[indexPath.row] + " available"
-        cell.imageCell.image = UIImage(named: data.productImage[indexPath.row])
-        cell.imageBorderCell.image = UIImage(named: "line.png")
         
+        // add/remove button logic
         cell.addToCartButton.tag = indexPath.row
         cell.addToCartButton.addTarget(self, action: "addToCart:", forControlEvents: .TouchUpInside)
         
@@ -53,11 +57,13 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
             cell.addToCartButton.hidden = false
         }
         
+        // decorative line
+        cell.imageBorderCell.image = UIImage(named: "line.png")
+        
         return cell
     }
     
     // add and remove from cart
-    
     @IBOutlet weak var productErrorMessage: UILabel!
     
     func addToCart(sender: UIButton) {
@@ -77,6 +83,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         productCell.reloadData()
     }
     
+    // stock logic
     func checkStock(selectedProduct: Int) {
         var resultOfStockCheck = cart.checkStock(selectedProduct)
         
@@ -93,6 +100,7 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
         data.productStock = resultOfReturnStock
     }
     
+    // removing product requires voucher check
     func checkVouchersAgain() {
         for item in cart.cartVouchers {
             if cart.checkVoucher(item) == false {
@@ -102,7 +110,6 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     // shopping bag "cart" display
-
     @IBOutlet weak var cartButton: UIButton!
     @IBOutlet weak var cartTotalDisplay: UILabel!
     
@@ -113,7 +120,6 @@ class ProductViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     // pass cart data between views
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "segueToVouchers") {
             var svc = segue.destinationViewController as! VoucherViewController;

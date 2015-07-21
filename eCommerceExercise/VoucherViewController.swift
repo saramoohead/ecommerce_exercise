@@ -21,7 +21,9 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let voucherCell = collectionView.dequeueReusableCellWithReuseIdentifier("voucherCell", forIndexPath: indexPath) as! VoucherCollectionViewCell
+        
         voucherCell.voucherCategory.text = data.voucherDisplayCategory[indexPath.row]
         voucherCell.voucherConditions.text = data.voucherConditionDescription[indexPath.row]
         voucherCell.voucherImage.image = UIImage(named: data.voucherImage[indexPath.row])
@@ -45,7 +47,6 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     // add and remove vouchers
-    
     var cart = CartBrain()
     @IBOutlet weak var voucherErrorMessage: UILabel!
     
@@ -64,6 +65,7 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
         voucherCollection.reloadData()
     }
     
+    // check voucher
     func checkVoucher(selectedVoucher: Int) {
         if cart.checkVoucher(selectedVoucher) {
             cart.cartVouchers.append(selectedVoucher)
@@ -73,7 +75,6 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     // shopping bag "cart" display
-    
     @IBOutlet weak var cartItemCount: UIButton!
     @IBOutlet weak var cartTotal: UILabel!
 
@@ -84,7 +85,6 @@ class VoucherViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     // passing cart data between views
-    
     var passedTotal:String!
     var passedCartContents:[Int]!
     var passedVouchers:[Int]!

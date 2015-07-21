@@ -21,6 +21,26 @@ class CartBrain {
         array.removeAtIndex(index!)
     }
 
+    func checkStock(selectedProduct: Int) -> (newStockList: [String], accepted: Bool) {
+        var result: (newStockList:[String], accepted: Bool)
+        
+        result.newStockList = []
+        result.accepted = false
+        
+        var availableStock = (productData.productStock[selectedProduct]).toInt()!
+        
+        if availableStock > 0 {
+            productData.productStock[selectedProduct] = "\(availableStock - 1)"
+            result.newStockList = productData.productStock
+            result.accepted = true
+            
+        } else {
+            result.accepted = false
+        }
+        
+        return result
+    }
+    
     var total: Float = 0
     var productTotal: Float = 0
     var voucherTotal: Float = 0
@@ -61,26 +81,6 @@ class CartBrain {
         }
 
         return accepted
-    }
-    
-    func checkStock(selectedProduct: Int) -> (newStockList: [String], accepted: Bool) {
-        var result: (newStockList:[String], accepted: Bool)
-
-        result.newStockList = []
-        result.accepted = false
-        
-        var availableStock = (productData.productStock[selectedProduct]).toInt()!
-        
-        if availableStock > 0 {
-            productData.productStock[selectedProduct] = "\(availableStock - 1)"
-            result.newStockList = productData.productStock
-            result.accepted = true
-            
-        } else {
-            result.accepted = false
-        }
-
-        return result
     }
     
     func returnStock(selectedProduct: Int) -> [String] {
